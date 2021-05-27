@@ -3,7 +3,7 @@ import './App.css';
 
 export default function NavBar() {
     return (
-        <div class="nav-bar container-sm">
+        <div class="nav-bar">
             <h1> CAKE SHOP </h1>
             <nav>
                 <ul>
