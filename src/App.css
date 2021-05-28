@@ -1,9 +1,10 @@
 :root{
     font-family: 'Merienda One', cursive; 
     font-size: 16px;
-    --text-primary: #b6b6b6;
+    height: 100vh;
+    --text-primary: #f3d1d1;
     --text-secondary: #ececec;
-    --bg-primary: #23232e;
+    --bg-primary: #d4d4e4;
     --bg-secondary: #141418;
     --transition-speed: 600ms;
 
@@ -21,16 +22,41 @@ body{
 .nav-bar{
     display: flex;
     /* margin-left: 5rem; */
-    padding: 1rem;
+    padding: .5rem;
     position: relative;
     background-color: var(--text-primary);
 }
 
+.nav-bar ul{
+    display: flex;
+    padding: 1rem;
+    margin-left:3rem;
+    justify-content: flex-end;
+}
 
+.nav-bar li{
+ display: flex;
+ margin-right: 1rem;
+    
+}
 
-
-
-
+/* drop down */
+.dropdown {
+    position: absolute;
+    top: 58px;
+    width: 300px;
+    transform: translateX(-45%);
+    background-color: var(--bg-primary);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    overflow: hidden;
+    transition: height var(--speed) ease;
+  }
+  .dropdown p:hover{
+      rotate: 5deg;
+  }
+/* Scroll up */
 .page-up{
     display:flex;
     left: 100px;
