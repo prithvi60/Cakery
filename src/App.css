@@ -31,7 +31,7 @@ background: #FFFFFF;
 box-shadow: -8px 7px 32px rgba(255, 10, 10, 0.25);
 }
 .nav-bar h1{
-    position: fixed;
+position: absolute;
 width: 175px;
 height: 50px;
 left: 27px;
@@ -98,6 +98,37 @@ background: #FFFFFF;
     
    
  }
+
+.search-overlay{
+    display: flex;
+   justify-content: center;
+    position: absolute;
+    align-items: center;
+    height:100vh;
+    transform: translate(-81.7%,-10%);
+    background-color:rgb(0, 0, 0);
+    opacity: 70%;
+    padding: 6.5rem;
+    margin: 1rem;
+    
+}
+.pic-container{
+    display: flex;
+    flex-direction: column;
+    width: 411px;
+    height: 118px;
+    background-color: rgb(223, 238, 248);
+
+}
+
+/* Speciality */
+.container{
+    display: flex;
+    width: 411px;
+    height: 786px;
+    transform: translateY(118px);
+
+}
 /* Scroll up */
 .page-up{
     display:flex;
