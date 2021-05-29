@@ -4,7 +4,7 @@ import './App.css';
 export default function NavBar() {
     return (
         <div class="nav-bar">
-            <h1> CAKE SHOP </h1>
+            <h1> Bellaria</h1>
             <nav>
                 <ul>
                     <li>
@@ -20,8 +20,14 @@ export default function NavBar() {
                     </li>
                    <Menu>
                        <div class="dropdown">
-                        <p>Home</p>
-                        <p>Contact</p>
+                        <p>Home <span class="arrow">-</span>
+                        </p>
+
+                        <p>Pages</p>
+                        <p>Portfolio</p>
+                        <p>Blog</p>  
+                        <p>Shop</p>
+                        <p>Contacts</p>
                        </div>
                    </Menu>
                 

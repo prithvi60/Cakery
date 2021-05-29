@@ -11,7 +11,7 @@
 }
 body{
     color: black;
-    background-color: white;
+    background-color: rgb(245, 240, 240);
     margin: 0;
     padding: 0;
     
@@ -20,45 +20,84 @@ body{
 
 /* navigation bar */
 .nav-bar{
-    display: flex;
-    /* margin-left: 5rem; */
-    padding: .5rem;
-    position: relative;
-    background-color: var(--text-primary);
+ display: flex;
+/* position: absolute; */
+width: 411px;
+height: 118px;
+left: 0px;
+top: 0px;
+justify-content: center;
+background: #FFFFFF;
+box-shadow: -8px 7px 32px rgba(255, 10, 10, 0.25);
 }
+.nav-bar h1{
+    position: fixed;
+width: 175px;
+height: 50px;
+left: 27px;
+top: 14px;
+font-family: Merienda One;
+font-style: normal;
+font-weight: normal;
+font-size: 33px;
+line-height: 48px;
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: flex-start;
+color: #000000;
+}
+.nav-bar nav{
+    position: absolute;
+width: 128.5px;
+height: 90px;
+left: 271px;
+top: 17px;
 
+background: #FFFFFF;
+}
 .nav-bar ul{
     display: flex;
-    padding: 1rem;
-    margin-left:3rem;
-    justify-content: flex-end;
-}
-
-.nav-bar li{
- display: flex;
- margin-right: 1rem;
+    width: 117px;
+    height: 30px;
+    left: 276px;
     
+    justify-content:space-between;
+    padding: .5rem;
+}
+.nav-bar li{
+    display: flex;
 }
 .nav-btn{
     background-color: transparent;
-    border-color: transparent;
+    border-color: transparent;   
 }
 /* drop down */
 .dropdown {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 58px;
-    width: 300px;
+    width: 350px;
+    left: -85px;
+    top: 101px;
+
     transform: translateX(-45%);
-    background-color: var(--bg-primary);
+    background-color:white;
     border: var(--border);
     border-radius: var(--border-radius);
-    padding: 1rem;
+    padding: 14px;
     overflow: hidden;
     transition: height var(--speed) ease;
   }
-  .dropdown p:hover{
-      rotate: 5deg;
+  .dropdown p{
+     margin: 8px;
   }
+  .dropdown span{
+      /* display: flex; */
+      justify-content: flex-end;
+    
+   
+ }
 /* Scroll up */
 .page-up{
     display:flex;
