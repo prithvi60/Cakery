@@ -3,19 +3,14 @@ import './App.css';
 
 
 export default function NavBar() {
-   
+
     return ( <>
         <div className="nav-bar">
             <h1> Bellaria</h1>
             <nav>
                 <ul>
                 <Cart><div className="dropdown">cart item</div></Cart>
-                   <Search>
-                       <div className="search-overlay">
-                       <SearchItem>
-                       </SearchItem>
-                       </div>
-                   </Search>
+                   <Search/>
                    <Menu >
                        <div className="dropdown">
                         <p>Home <span className="arrow">-</span>
@@ -35,6 +30,7 @@ export default function NavBar() {
          <div className="pic-container"></div>
          </>
     )
+
 }
 
 function Menu(props){
@@ -69,8 +65,9 @@ function Cart(props){
     );
     }
     
-    function Search(props){
+    function Search(){
         const [open,setOpen] = useState(false);
+
        return(
         <li>
         <button className="nav-btn" onClick={()=> setOpen(!open)}> 
@@ -78,18 +75,30 @@ function Cart(props){
                         <path fill="#000000" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
                         </svg>   
                     </button>  
-                    {open && props.children}
+                    
+                    <SearchItem open={open} setOpen={setOpen}>
+                 
+                   </SearchItem>
         </li>
+            
+             
 
               );
        }
-    function SearchItem(props){
-        const [open,setOpen] = useState(true);
-       while(open) { return(   
+    
+
+    function SearchItem({open,setOpen}){
+       if(open)  return(   
             <>
-            <input  className="input-group-text" type="text" placeholder="Search..."/>
-            <button className="btn" onClick={()=> setOpen(!open)}>X</button>
-             </>
+            <div className="search-overlay">     
+             <input  className="input-group-text" type="text" placeholder="Search..."/>
+             <button className="del-btn" onClick={()=>setOpen(!open) }>X</button>
+            </div>
+           
+              </>
         );  
-       }   
+        else
+        return null;
+        
     }
+
