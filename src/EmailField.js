@@ -4,8 +4,8 @@ export default function EmailField() {
     return (<>
     <div className="container"></div>
         <div >
-            <input  class="input-group-text" type="text"/>
-            <button class="btn">Mail</button>
+            <input  className="input-group-text" type="text"/>
+            <button className="btn">Mail</button>
         </div>
         </>
     )

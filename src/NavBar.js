@@ -1,7 +1,6 @@
 import React,{useState} from 'react'
 import './App.css';
 
-
 export default function NavBar() {
 
     return ( <>
@@ -27,7 +26,9 @@ export default function NavBar() {
                 </ul>
             </nav> 
         </div>
-         <div className="pic-container"></div>
+         <div className="pic-container">
+          <span className="image-card"/> 
+         </div>
          </>
     )
 
@@ -91,7 +92,7 @@ function Cart(props){
        if(open)  return(   
             <>
             <div className="search-overlay">     
-             <input  className="input-group-text" type="text" placeholder="Search..."/>
+             <input  className="search-text" type="text" placeholder="Search..."/>
              <button className="del-btn" onClick={()=>setOpen(!open) }>X</button>
             </div>
            
