@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import './App.css';
 
+
 export default function NavBar() {
 
     return ( <>
@@ -11,16 +12,7 @@ export default function NavBar() {
                 <Cart><div className="dropdown">cart item</div></Cart>
                    <Search/>
                    <Menu >
-                       <div className="dropdown">
-                        <p>Home <span className="arrow">-</span>
-                        </p>
-
-                        <p>Pages</p>
-                        <p>Portfolio</p>
-                        <p>Blog</p>  
-                        <p>Shop</p>
-                        <p>Contacts</p>
-                       </div>
+                   <DoubleDrop/>
                    </Menu>
                 
                 </ul>
@@ -48,6 +40,121 @@ return(
    {open && props.children}
    </li>
 );
+}
+
+function DoubleDrop(props){
+    const [open,setOpen] = useState(false);
+
+    return(
+        <div className="dropdown">
+        <p>Home 
+            <span className="arrow">
+            <button className="nav-btn" onClick={()=> setOpen(!open)}>  
+            <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
+             <path fill="#000000" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+            </svg>
+            </button>
+            </span>
+            <DoubleDropItem  open={open}>
+                <p>Cakes</p>
+                <p>Lollipop</p> 
+                <p>Wedding</p> 
+                <p>Coffee</p> 
+                <p>Ice-Cream</p> 
+                <p>Home One-page</p> 
+                <p>Shop</p> 
+                <p>Landing</p> 
+            </DoubleDropItem>
+          
+
+        </p>
+
+        <p>Pages
+        <span className="arrow">
+            <button className="nav-btn" onClick={()=> setOpen(!open)}>  
+            <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
+             <path fill="#000000" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+            </svg>
+            </button>
+            </span>
+            <DoubleDropItem  open={open}>
+                <p>Cakes</p>
+                <p>Lollipop</p> 
+                <p>IceCream</p> 
+            </DoubleDropItem>
+           
+        </p>
+        <p>Portfolio
+        <span className="arrow">
+            <button className="nav-btn" onClick={()=> setOpen(!open)}>  
+            <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
+             <path fill="#000000" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+            </svg>
+            </button>
+            </span>
+            <DoubleDropItem  open={open}>
+                <p>Cakes</p>
+                <p>Lollipop</p> 
+                <p>IceCream</p> 
+            </DoubleDropItem>
+        
+        </p>
+        <p>Blog
+        <span className="arrow">
+            <button className="nav-btn" onClick={()=> setOpen(!open)}>  
+            <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
+             <path fill="#000000" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+            </svg>
+            </button>
+            </span>
+            <DoubleDropItem  open={open}>
+                <p>Cakes</p>
+                <p>Lollipop</p> 
+                <p>IceCream</p> 
+            </DoubleDropItem>
+          </p>  
+        <p>Shop
+        <span className="arrow">
+            <button className="nav-btn" onClick={()=> setOpen(!open)}>  
+            <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
+             <path fill="#000000" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+            </svg>
+            </button>
+            </span>
+            <DoubleDropItem  open={open}>
+                <p>Cakes</p>
+                <p>Lollipop</p> 
+                <p>IceCream</p> 
+            </DoubleDropItem>
+        </p>
+        <p>Contacts
+        <span className="arrow">
+            <button className="nav-btn" onClick={()=> setOpen(!open)}>  
+            <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
+             <path fill="#000000" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+            </svg>
+            </button>
+            </span>
+            <DoubleDropItem  open={open}>
+                <p>Cakes</p>
+                <p>Lollipop</p> 
+                <p>IceCream</p> 
+            </DoubleDropItem>
+        </p>
+       </div>
+
+    )
+
+}
+
+function DoubleDropItem(props,open){
+    if(open)
+        return(
+            <div>
+            {props.children} 
+            </div>
+        );
+    else return null;
 }
 
 function Cart(props){
