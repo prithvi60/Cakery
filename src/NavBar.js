@@ -46,12 +46,14 @@ function DoubleDrop(props){
         <div className="dropdown">
         <p>Home 
             <span className="arrow">
-            <button className="nav-btn" onClick={()=> setOpen(!open)}>  
+            <button className="nav-btn" onClick={() =>setOpen(!open)}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
              <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
             </button>
             </span>
+            
+
             <DoubleDropItem  open={open}>
                 <p>Cakes</p>
                 <p>Lollipop</p> 
@@ -62,22 +64,22 @@ function DoubleDrop(props){
                 <p>Shop</p> 
                 <p>Landing</p> 
             </DoubleDropItem>
-          
-
-        </p>
-
+            </p>
+       
         <p>Pages
         <span className="arrow">
-            <button className="nav-btn" onClick={()=> setOpen(!open)}>  
+            <button className="nav-btn" onClick={() => setOpen(!open)}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
              <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
             </button>
             </span>
             <DoubleDropItem  open={open}>
-                <p>Cakes</p>
-                <p>Lollipop</p> 
-                <p>IceCream</p> 
+                <p>About Us</p>
+                <p>Our Staff</p> 
+                <p>Pricing Tables</p>   
+                <p>Content Elements</p> 
+                <p>Recipies Grid</p> 
             </DoubleDropItem>
            
         </p>
@@ -90,9 +92,13 @@ function DoubleDrop(props){
             </button>
             </span>
             <DoubleDropItem  open={open}>
-                <p>Cakes</p>
-                <p>Lollipop</p> 
-                <p>IceCream</p> 
+                <p>Masonry</p>
+                <p>Masonry wide</p> 
+                <p>Wide</p> 
+                <p>With Filter</p> 
+                <p>Two Columns</p> 
+                <p>With Sidebar</p> 
+                <p>Square</p> 
             </DoubleDropItem>
         
         </p>
@@ -105,9 +111,9 @@ function DoubleDrop(props){
             </button>
             </span>
             <DoubleDropItem  open={open}>
-                <p>Cakes</p>
-                <p>Lollipop</p> 
-                <p>IceCream</p> 
+                <p>Checkerboard</p>
+                <p>Standard</p> 
+                <p>Masonry</p> 
             </DoubleDropItem>
           </p>  
         <p>Shop
@@ -119,24 +125,13 @@ function DoubleDrop(props){
             </button>
             </span>
             <DoubleDropItem  open={open}>
-                <p>Cakes</p>
-                <p>Lollipop</p> 
-                <p>IceCream</p> 
+                <p>Shop</p>
+                <p>Cart</p> 
+                <p>Checkout</p> 
+                <p>My account</p> 
             </DoubleDropItem>
         </p>
         <p>Contacts
-        <span className="arrow">
-            <button className="nav-btn" onClick={()=> setOpen(!open)}>  
-            <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
-             <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-            </svg>
-            </button>
-            </span>
-            <DoubleDropItem  open={open}>
-                <p>Cakes</p>
-                <p>Lollipop</p> 
-                <p>IceCream</p> 
-            </DoubleDropItem>
         </p>
        </div>
 
@@ -144,14 +139,14 @@ function DoubleDrop(props){
 
 }
 
-function DoubleDropItem(props,open){
-    if(open)
-        return(
-            <div>
-            {props.children} 
-            </div>
-        );
-    else return null;
+function DoubleDropItem(props){
+   if(props.open) return(
+        <div>
+        {props.children} 
+        </div>
+    );
+    else
+    return null;
 }
 
 function Cart(props){
@@ -204,6 +199,5 @@ function Cart(props){
         );  
         else
         return null;
-        
     }
 

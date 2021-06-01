@@ -15,7 +15,6 @@ return(
         <div className="pic-container">
           <span className="image-card"/> 
          </div>
-        <br></br>
         <Specality/>
       
        

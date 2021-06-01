@@ -91,6 +91,7 @@ background: #FFFFFF;
   }
   .dropdown p{
      margin: 8px;
+     /* height: fit-content; */
   }
   .dropdown span{
       /* display: flex; */
@@ -145,7 +146,7 @@ background: #FFFFFF;
     display: flex;
     flex-direction: column;
     width: 411px;
-    height: 118px;
+    height: 182px;
     background-color: rgb(223, 238, 248);
 
 }
@@ -153,20 +154,31 @@ background: #FFFFFF;
     display: flex;
     flex-direction: column;
     width: 411px;
-    height: 118px;
+    height: 182px;
     background-image: url(./images/title-img.jpg);
     background-size:411px;
     background-blend-mode: overlay;
 }
 
 /* Speciality */
-.container{
+.spl-container{
     display: flex;
     width: 411px;
     height: 786px;
-    transform: translateY(118px);
+    transform: translateY(-20px);
+    /* background-image: url(./images/whitebg.jpg); */
+    /* background-size:411px; */
+    /* background-blend-mode: overlay;  */
 
 }
+.header{
+    display: flex;
+    justify-content: center;
+    transform: translate(30px,50px);
+    font-size: 48px;
+
+}
+
 /* Scroll up */
 .page-up{
     /* display:flex; */
