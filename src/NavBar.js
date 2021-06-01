@@ -18,9 +18,6 @@ export default function NavBar() {
                 </ul>
             </nav> 
         </div>
-         <div className="pic-container">
-          <span className="image-card"/> 
-         </div>
          </>
     )
 
@@ -51,7 +48,7 @@ function DoubleDrop(props){
             <span className="arrow">
             <button className="nav-btn" onClick={()=> setOpen(!open)}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
-             <path fill="#000000" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+             <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
             </button>
             </span>
@@ -72,8 +69,8 @@ function DoubleDrop(props){
         <p>Pages
         <span className="arrow">
             <button className="nav-btn" onClick={()=> setOpen(!open)}>  
-            <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
-             <path fill="#000000" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+            <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
+             <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
             </button>
             </span>
@@ -88,7 +85,7 @@ function DoubleDrop(props){
         <span className="arrow">
             <button className="nav-btn" onClick={()=> setOpen(!open)}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
-             <path fill="#000000" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+             <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
             </button>
             </span>
@@ -103,7 +100,7 @@ function DoubleDrop(props){
         <span className="arrow">
             <button className="nav-btn" onClick={()=> setOpen(!open)}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
-             <path fill="#000000" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+             <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
             </button>
             </span>
@@ -117,7 +114,7 @@ function DoubleDrop(props){
         <span className="arrow">
             <button className="nav-btn" onClick={()=> setOpen(!open)}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
-             <path fill="#000000" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+             <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
             </button>
             </span>
@@ -131,7 +128,7 @@ function DoubleDrop(props){
         <span className="arrow">
             <button className="nav-btn" onClick={()=> setOpen(!open)}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
-             <path fill="#000000" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+             <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
             </button>
             </span>

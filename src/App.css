@@ -169,6 +169,7 @@ background: #FFFFFF;
 }
 /* Scroll up */
 .page-up{
-    display:flex;
-    left: 100px;
+    /* display:flex; */
+    position: fixed;
+    transform: translate(350px,760px);
 }

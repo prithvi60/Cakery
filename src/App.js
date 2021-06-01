@@ -1,6 +1,5 @@
 import React from 'react';
 import NavBar from './NavBar';
-import ScrollLeft from './ScrollLeft';
 import PageUp from './PageUp.js';
 import EmailField from './EmailField';
 import Socials from './Socials';
@@ -11,12 +10,15 @@ function App() {
 return(
 <> 
 {/* components */}
-   
+         <PageUp/>
         <NavBar/>
+        <div className="pic-container">
+          <span className="image-card"/> 
+         </div>
         <br></br>
         <Specality/>
-            <ScrollLeft/>
-            <PageUp/>
+      
+       
          <br></br>
             <EmailField/>
             <Socials/>
