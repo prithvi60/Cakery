@@ -164,6 +164,8 @@ background: #FFFFFF;
 /* Speciality */
 .spl-container{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 411px;
     height: 786px;
     transform: translateY(-20px);
@@ -174,11 +176,24 @@ background: #FFFFFF;
 }
 .header{
     display: flex;
-    justify-content: center;
-    transform: translate(30px,50px);
+  
+    transform: translateY(50px);
     font-size: 48px;
+    max-height: 182px;
 
 }
+.carousel-wrapper {
+    display: flex;
+    transform: translateY(50px);
+    width: 100%;
+  }
+  .rec-arrow{
+      opacity: 0;
+  }
+
+
+
+
 
 /* Scroll up */
 .page-up{
