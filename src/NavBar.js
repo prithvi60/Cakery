@@ -10,11 +10,12 @@ export default function NavBar() {
            <img className="text-title" src={texttitle} alt="Belaria" />
             <nav>
                 <ul>
-                <Cart><div className="dropdown">cart item</div></Cart>
-                   <Search/>
-                   <Menu >
+                <Cart><div className="cart-item">
+                    no products in the cart</div></Cart>
+                <Search/>
+                <Menu >
                    <DoubleDrop/>
-                   </Menu>
+                </Menu>
                 
                 </ul>
             </nav> 

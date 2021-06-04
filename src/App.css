@@ -68,6 +68,22 @@ background: #FFFFFF;
     background-color: transparent;
     border-color: transparent;   
 }
+.cart-item{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 250px;
+    left: -135px;
+    top: 46px;
+    z-index: 100;
+    transform: translateX(-45%);
+    background-color:white;
+    padding: 14px;
+    overflow: hidden;
+    transition: height var(--speed) ease;
+    border: 2px solid rgba(0, 128, 0, 0.253);
+    border-radius: 10px;
+}
 /* drop down */
 .dropdown {
     display: flex;
