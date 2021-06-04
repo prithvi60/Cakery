@@ -123,7 +123,7 @@ background: #FFFFFF;
     height:30vh;
     transform: translate(-81.7%,-10%);
     background-color:rgb(0, 0, 0);
-    opacity: 75%;
+    opacity: 0.75;
     padding: 6.6rem;
     padding-top: 30vh;
     padding-bottom: 50vh;
@@ -151,7 +151,7 @@ background: #FFFFFF;
 ::placeholder { 
     color: white;
     font-weight: bold;
-    opacity: 75%; 
+    opacity: 0.5;
   }
   
 /* title picture container */
