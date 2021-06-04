@@ -13,7 +13,11 @@ return(
          <PageUp/>
         <NavBar/>
         <div className="pic-container">
-          <span className="image-card"/> 
+        <div className="image-card"> 
+        <div className="icon-logo">
+        <h1 className="icon-text">Welcome to Bellaria</h1>
+        </div> 
+        </div>
          </div>
         <Specality/>
       

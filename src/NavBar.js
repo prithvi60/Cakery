@@ -1,12 +1,13 @@
 import React,{useState} from 'react'
 import './App.css';
+import texttitle from './icons/textheading.png';
 
 
 export default function NavBar() {
 
     return ( <>
         <div className="nav-bar">
-            <h1> Bellaria</h1>
+           <img className="text-title" src={texttitle} alt="Belaria" />
             <nav>
                 <ul>
                 <Cart><div className="dropdown">cart item</div></Cart>

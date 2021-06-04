@@ -4,10 +4,10 @@ import Carousel from "react-elastic-carousel";
 import styled from "styled-components";
 
 import {ReactComponent as CurveImg} from "./icons/curve.svg"
-import {ReactComponent as Carousa} from "./icons/carousel1.svg"
-import {ReactComponent as Carousb} from "./icons/carousel2.svg"
-import {ReactComponent as Carousc} from "./icons/carousel3.svg"
-
+import {ReactComponent as Carous1} from "./icons/carousel1.svg"
+import {ReactComponent as Carous2} from "./icons/carousel2.svg"
+import {ReactComponent as Carous3} from "./icons/cake3.svg"
+import {ReactComponent as Carous4} from "./icons/cake4.svg"
 
 
 export default function Specality() {
@@ -39,7 +39,7 @@ const breakPoints = [
 
 function ImageCarousel(){
     const [items, setItems] = useState(
-        [<CurveImg/>, <Carousa/>, <Carousb/>, <Carousc/>, 5, 6, 7, 8,9]
+        [<Carous1/>  , <Carous2/>, <Carous3/>, <Carous4/>]
         );
     return(
 
