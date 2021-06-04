@@ -154,7 +154,6 @@ background: #FFFFFF;
     height: 182px;
     background-image: url(./images/title-img.jpg);
     background-size:411px;
-
 }
 
 .icon-logo{
@@ -219,4 +218,30 @@ background: #FFFFFF;
     z-index: 100;
     position: fixed;
     transform: translate(350px,760px);
+}
+
+/* Follow Section */
+.mail-container{
+    display: flex;
+    flex-direction: column;
+    width: 411px;
+    height: 786px;
+}
+.mail-field{
+    display: flex;
+    justify-content: center;
+    transform: translateY(500px);
+    
+}
+/* footer */
+.footer{display:flex;
+    width: 411px;
+    height: 140px;
+    background-color: rgb(83, 40, 40) ;
+}
+.footer-text{display: flex;
+transform: translateX(60px);
+align-items: center;
+font-size: 14px ;
+color: white;
 }

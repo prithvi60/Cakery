@@ -20,12 +20,11 @@ return(
         </div>
          </div>
         <Specality/>
-      
-       
-         <br></br>
-            <EmailField/>
-            <Socials/>
-        
+          <EmailField/>
+          <Socials/>
+        <div className="footer">
+          <h1 className="footer-text">Bellaria- A Delicious Cakes and Bakery </h1>
+        </div>
   
 </>
 );
