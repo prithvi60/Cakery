@@ -5,8 +5,8 @@ import styled from "styled-components";
 
 import {ReactComponent as Carous1} from "./icons/carousel1.svg"
 import {ReactComponent as Carous2} from "./icons/carousel2.svg"
-import {ReactComponent as Carous3} from "./icons/cake3.svg"
-import {ReactComponent as Carous4} from "./icons/cake4.svg"
+import {ReactComponent as Carous3} from "./icons/cherrycake.svg"
+import {ReactComponent as Carous4} from "./icons/cake3.svg"
 
 
 export default function Specality() {
@@ -29,10 +29,10 @@ const breakPoints = [
   justify-content: center;
   align-items: center;
   height: 250px;
-  width: 100%;
+  width: 250px;
   background-color: transparent;
   color: black;
-  margin: 15px;
+  margin: 35px;
   font-size: 13px;
 `;
 
@@ -58,32 +58,40 @@ function CarousalCard({item}){
   return(
     <div>
     <Carous1/>
+    <div className="spl-txt">
     <h1>Cupcake</h1>
-    <p>{item}</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+    </div>
     </div>
   );
   else if(item === 2)
   return(
     <div>
     <Carous2/>
+    <div className="spl-txt">
     <h1>Macaroons</h1>
-    <p>{item}</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+    </div>
     </div>
   );
   else if(item === 3)
   return(
     <div>
     <Carous3/>
+    <div className="spl-txt">
     <h1>Occasion Cakes</h1>
-    <p>{item}</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+    </div>
     </div>
   );
   else if(item === 4)
   return(
     <div>
     <Carous4/>
+    <div className="spl-txt">
     <h1>Small Cakes</h1>
-    <p>{item}</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+    </div>
     </div>
   );
   else return null;

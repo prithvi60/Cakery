@@ -16,7 +16,7 @@ export default function NavBar() {
                 <Menu >
                    <DoubleDrop/>
                 </Menu>
-                
+               
                 </ul>
             </nav> 
         </div>
@@ -41,97 +41,72 @@ return(
 );
 }
 
-function DoubleDrop(props){
+function DoubleDrop(){
     const [open,setOpen] = useState(false);
-
+    const[item,setItem] =useState(0);
     return(
         <div className="dropdown">
-        <p>Home 
+        <p className="parent"> Home 
             <span className="arrow">
-            <button className="nav-btn" onClick={() =>setOpen(!open)}>  
+            <button className="nav-btn" onClick={() =>{setOpen(!open);setItem(1);}}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
              <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
             </button>
             </span>
-            
-
-            <DoubleDropItem  open={open}>
-                <p>Cakes</p>
-                <p>Lollipop</p> 
-                <p>Wedding</p> 
-                <p>Coffee</p> 
-                <p>Ice-Cream</p> 
-                <p>Home One-page</p> 
-                <p>Shop</p> 
-                <p>Landing</p> 
+            <DoubleDropItem value={1}item={item} open={open}>
+             
             </DoubleDropItem>
+       
             </p>
        
-        <p>Pages
+        <p className="parent">Pages
         <span className="arrow">
-            <button className="nav-btn" onClick={() => setOpen(!open)}>  
+            <button className="nav-btn" onClick={() => {setOpen(!open);setItem(2);}}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
              <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
             </button>
             </span>
-            <DoubleDropItem  open={open}>
-                <p>About Us</p>
-                <p>Our Staff</p> 
-                <p>Pricing Tables</p>   
-                <p>Content Elements</p> 
-                <p>Recipies Grid</p> 
+            <DoubleDropItem value={2} item={item} open={open}>
+              
             </DoubleDropItem>
            
         </p>
-        <p>Portfolio
+        <p className="parent">Portfolio
         <span className="arrow">
-            <button className="nav-btn" onClick={()=> setOpen(!open)}>  
+            <button className="nav-btn" onClick={()=> {setOpen(!open);setItem(3);}}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
              <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
             </button>
             </span>
-            <DoubleDropItem  open={open}>
-                <p>Masonry</p>
-                <p>Masonry wide</p> 
-                <p>Wide</p> 
-                <p>With Filter</p> 
-                <p>Two Columns</p> 
-                <p>With Sidebar</p> 
-                <p>Square</p> 
+            <DoubleDropItem value={3} item={item} open={open}>
+           
             </DoubleDropItem>
         
         </p>
-        <p>Blog
+        <p className="parent">Blog
         <span className="arrow">
-            <button className="nav-btn" onClick={()=> setOpen(!open)}>  
+            <button className="nav-btn" onClick={()=> {setOpen(!open);setItem(4);}}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
              <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
             </button>
             </span>
-            <DoubleDropItem  open={open}>
-                <p>Checkerboard</p>
-                <p>Standard</p> 
-                <p>Masonry</p> 
+            <DoubleDropItem value={4} item={item} open={open}>
+              
             </DoubleDropItem>
           </p>  
-        <p>Shop
+        <p className="parent"> Shop
         <span className="arrow">
-            <button className="nav-btn" onClick={()=> setOpen(!open)}>  
+            <button className="nav-btn" onClick={()=>{setOpen(!open);setItem(5);}}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
              <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
             </button>
             </span>
-            <DoubleDropItem  open={open}>
-                <p>Shop</p>
-                <p>Cart</p> 
-                <p>Checkout</p> 
-                <p>My account</p> 
-            </DoubleDropItem>
+            <DoubleDropItem value={5} item={item} open={open}/>
         </p>
         <p>Contacts
         </p>
@@ -142,10 +117,54 @@ function DoubleDrop(props){
 }
 
 function DoubleDropItem(props){
-   if(props.open) return(
-        <div>
-        {props.children} 
-        </div>
+   if(props.open && props.item ===1 && props.item === props.value) return(
+        <>   
+          <p>Cakes</p>
+                <p>Lollipop</p> 
+                <p>Wedding</p> 
+                <p>Coffee</p> 
+                <p>Ice-Cream</p> 
+                <p>Home One-page</p> 
+                <p>Shop</p> 
+                <p>Landing</p> 
+        </>
+    );
+    else if(props.open && props.item ===2 && props.item === props.value) return(
+        <>
+        
+            <p>About Us</p>
+                <p>Our Staff</p> 
+                <p>Pricing Tables</p>   
+                <p>Content Elements</p> 
+                <p>Recipies Grid</p> 
+        </>
+    );
+    else if(props.open && props.item ===3 && props.item === props.value) return(
+        <>
+   
+                <p>Masonry</p>
+                <p>Masonry wide</p> 
+                <p>Wide</p> 
+                <p>With Filter</p> 
+                <p>Two Columns</p> 
+                <p>With Sidebar</p> 
+                <p>Square</p> 
+        </>
+    );
+    else if(props.open && props.item ===4 && props.item === props.value) return(
+        <>
+                 <p>Checkerboard</p>
+                <p>Standard</p> 
+                <p>Masonry</p> 
+        </>
+    );
+    else if(props.open && props.item ===5 && props.item === props.value) return(
+        <>
+                  <p>Shop</p>
+                <p>Cart</p> 
+                <p>Checkout</p> 
+                <p>My account</p> 
+        </>
     );
     else
     return null;
@@ -190,7 +209,7 @@ function Cart(props){
     
 
     function SearchItem({open,setOpen}){
-       if(open)  return(   
+       if(open) return(   
             <>
             <div className="search-overlay">     
              <input  className="search-text" type="text" placeholder="Search..."/>
