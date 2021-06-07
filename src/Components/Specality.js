@@ -1,14 +1,14 @@
 import React,{useState} from 'react'
-import './App.css';
+import '../App.css';
 
 import Carousel from "react-elastic-carousel";
 import styled from "styled-components";
 
-import  SplImg from "./images/divider_4.png"
-import  Carous1 from "./icons/cake1.png"
-import  Carous2 from "./icons/cake2.png"
-import  Carous3 from "./icons/cake3.png"
-import  Carous4 from "./icons/cake4.png"
+import  SplImg from "../images/divider_4.png"
+import  Carous1 from "../icons/cake1.png"
+import  Carous2 from "../icons/cake2.png"
+import  Carous3 from "../icons/cake3.png"
+import  Carous4 from "../icons/cake4.png"
 
 
 export default function Specality() {

@@ -257,14 +257,66 @@ background: #FFFFFF;
     z-index: 100;
     position: fixed;
     transform: translate(350px,760px);
+    border:2px solid rgb(235, 175, 230);
+    border-radius: 15px ;
+    
 }
+/* Content */
+.cont-container{
+    display: flex;
+    flex-direction: column;
+    background-image: url(./images/greenbg.jpg),url(./images/style_1_2.svg);
+    background-blend-mode: overlay;
+    width: 411px;
+    height: 800px;
+    transform: translateY(-20px);
+    background-position-x: -710px,0px;
+    background-position-y: -20px,0px
+    
+}
+.heart{
+    display: flex;
+transform: translate(140px,50px);
+    width: 120px;
+    height: 120px;
+}
+.cont-container h1{
+    display: flex;
+    justify-content: center;
+    transform: translateY(150px);
+    color: white;
+}
+.cont-container p{
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    transform: translateY(200px);
+    color: white;
+}
+.cont-container button{
+    display: flex;
+    transform: translate(80px,300px);
+    background-color: transparent;
+    border:4px solid white;
+    border-radius: 50px;
+    width: 15rem;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+    transition: height var(--speed) ease;
 
+}
+.cont-container button:hover{
+    background-color: white;
+    color: black;
+}
 /* Follow Section */
 .mail-container{
     display: flex;
     flex-direction: column;
     width: 411px;
     height: 786px;
+    background-color:#554845 ;
 }
 .mail-field{
     display: flex;
@@ -276,7 +328,7 @@ background: #FFFFFF;
 .footer{display:flex;
     width: 411px;
     height: 140px;
-    background-color: rgb(83, 40, 40) ;
+    background-color: #3f3937 ;
 }
 .footer-text{display: flex;
 transform: translateX(60px);

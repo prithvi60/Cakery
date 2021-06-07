@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
-import './App.css';
-import texttitle from './icons/textheading.png';
+import '../App.css';
+import texttitle from '../icons/textheading.png';
 
 
 export default function NavBar() {
