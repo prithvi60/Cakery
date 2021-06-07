@@ -1,17 +1,20 @@
 import React,{useState} from 'react'
 import './App.css';
+
 import Carousel from "react-elastic-carousel";
 import styled from "styled-components";
 
-import {ReactComponent as Carous1} from "./icons/carousel1.svg"
-import {ReactComponent as Carous2} from "./icons/carousel2.svg"
-import {ReactComponent as Carous3} from "./icons/cherrycake.svg"
-import {ReactComponent as Carous4} from "./icons/cake3.svg"
+import  SplImg from "./images/divider_4.png"
+import  Carous1 from "./icons/cake1.png"
+import  Carous2 from "./icons/cake2.png"
+import  Carous3 from "./icons/cake3.png"
+import  Carous4 from "./icons/cake4.png"
 
 
 export default function Specality() {
     return (
         <div className="spl-container">  
+        <img className="header-img"src={SplImg} alt="headimg"/>
         <p className="header">Our Speciality</p>   
         <ImageCarousel/>
         </div>
@@ -43,7 +46,7 @@ function ImageCarousel(){
     return(
 
         <div className="carousel-wrapper">
-        <Carousel breakPoints={breakPoints}>
+        <Carousel breakPoints={breakPoints} showArrows={false} enableAutoPlay={true}>
           {items.map((item) => (
             <Item key={item}><CarousalCard item={item}/></Item>
           ))}
@@ -56,42 +59,91 @@ function ImageCarousel(){
 function CarousalCard({item}){
   if(item === 1)
   return(
-    <div>
-    <Carous1/>
-    <div className="spl-txt">
+    <div className="card" >
+     <img src={Carous1} alt="one"/>
+  
     <h1>Cupcake</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-    </div>
+  
     </div>
   );
   else if(item === 2)
   return(
-    <div>
-    <Carous2/>
-    <div className="spl-txt">
+    <div className="card">
+      <img src={Carous2} alt="two"/>
+    
     <h1>Macaroons</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-    </div>
+ 
     </div>
   );
   else if(item === 3)
   return(
-    <div>
-    <Carous3/>
-    <div className="spl-txt">
+    <div className="card">
+       <img src={Carous3} alt="three"/>
+ 
     <h1>Occasion Cakes</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-    </div>
+
     </div>
   );
   else if(item === 4)
   return(
-    <div>
-    <Carous4/>
-    <div className="spl-txt">
+    <div className="card">
+       <img src={Carous4} alt="four"/>
+ 
     <h1>Small Cakes</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+   
     </div>
+  );
+  else if(item === 5)
+  return(
+    <div className="card">
+     <img src={Carous1} alt="one"/>
+
+    <h1>Cupcake</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+ 
+    </div>
+  );
+  else if(item === 6)
+  return(
+    <div className="card">
+       <img src={Carous4} alt="four"/>
+  
+    <h1>Small Cakes</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+ 
+    </div>
+  );
+  else if(item === 7)
+  return(
+    <div className="card">
+       <img src={Carous3} alt="three"/>
+ 
+    <h1>Occasion Cakes</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+ 
+    </div>
+  );
+  else if(item === 8)
+  return(
+    <div className="card">
+      <img src={Carous2} alt="two"/>
+
+    <h1>Macaroons</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+ 
+    </div>
+  );
+  else if(item === 9)
+  return(
+    <div className="card">
+     <img src={Carous1} alt="one"/>
+    <h1>Cupcake</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+  
     </div>
   );
   else return null;
