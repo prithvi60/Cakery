@@ -6,7 +6,7 @@ import texttitle from '../icons/textheading.png';
 export default function NavBar() {
 
     return ( <>
-        <div className="nav-bar">
+        <div id="top" className="nav-bar">
            <img className="text-title" src={texttitle} alt="Belaria" />
             <nav>
                 <ul>

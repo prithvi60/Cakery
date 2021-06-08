@@ -1,3 +1,4 @@
+/* Css of all Components and Pages */
 :root{
     font-family: 'Merienda One', cursive; 
     font-size: 16px;
@@ -256,9 +257,9 @@ background: #FFFFFF;
     /* display:flex; */
     z-index: 100;
     position: fixed;
-    transform: translate(350px,760px);
-    border:2px solid rgb(235, 175, 230);
-    border-radius: 15px ;
+    transform: translate(310px,720px);
+    /* border:2px solid rgb(235, 175, 230);
+    border-radius: 15px ; */
     
 }
 /* Content */
