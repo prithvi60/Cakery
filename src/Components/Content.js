@@ -1,5 +1,6 @@
 import React from 'react'
 import heart from '../images/heart2.png'
+import {ReactComponent as BorderBtn} from '../icons/splbtn.svg'
 export default function Content() {
     return (
         <div className="cont-container">
@@ -10,7 +11,7 @@ export default function Content() {
             <p>
             Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent molestie eu turpis nec molestie. Nam auctor magna mauris, non lacinia felis mattis nec.
             </p>
-            <button>Discover More</button>
+            <button><BorderBtn fill="#ffffff"/>Discover More</button>
         </div>
     )
 }

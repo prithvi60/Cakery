@@ -1,7 +1,12 @@
 import React from 'react'
 import {ReactComponent as SrollIcon} from '../icons/start icon.svg'
+import { useEffect } from 'react'
 
-export default function PageUp() {
+export default function PageUp() {   
+useEffect(() => {
+    // When the user scrolls down 20px from the top of the document, show the button
+   window.onscroll = function() {scrollFunction()};
+   }, [])
     return (
         <div className="page-up">
             <button id="myBtn" onClick={Up} className="nav-btn">
@@ -14,10 +19,6 @@ export default function PageUp() {
    
     )
 }
-
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
