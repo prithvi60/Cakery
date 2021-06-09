@@ -311,6 +311,33 @@ transform: translate(140px,50px);
     background-color: white;
     color: black;
 }
+/* Creation */
+.show-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 411px;
+    height: auto;
+    transform: translateY(-20px);
+}
+.show-grid{
+    display: grid;
+    margin-left: 10px;
+    margin-right: 10px;
+    row-gap: 1em;
+}
+.show-img{
+    border: 2px transparent;
+    border-radius: 10px;
+   /* background-image: initial; */
+   display: block;
+   max-width:390px;
+   max-height:390px;
+   width: auto;
+   height: 320px;
+ 
+
+}
 /* Follow Section */
 .mail-container{
     display: flex;
