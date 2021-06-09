@@ -6,6 +6,8 @@ import  Pic2 from "../images/bg2.jpg"
 import  Pic3 from "../images/bg3.jpg"
 import  Pic4  from "../images/bg4.jpg"
 
+import  PicBg  from "../images/slider_bg_1.png"
+
 export default function Creation() {
     return (
         <div className="show-container">
@@ -20,8 +22,10 @@ function ImageShow(){
     const [open, setOpen] = useState(false)
     return(
         <div className="show-grid">
-        <img className="show-img"src={Pic1} alt="headimg" onClick={()=>setOpen(!open)}/>
-        <ImageDetails/>
+        <button className="invisible" onClick={()=>setOpen(!open)}>
+        <img className="show-img"src={Pic1} alt="headimg" />
+        </button>
+        <ImageDetails open={open}/>
         <img className="show-img"src={Pic2} alt="headimg"/>
         <img className="show-img"src={Pic3} alt="headimg"/>
         <img className="show-img"src={Pic4} alt="headimg"/>
@@ -31,7 +35,8 @@ function ImageShow(){
 
 function ImageDetails({open}){
 if(open) return(
-<div>
+<div className="show-inside">
+    <img className="show-img"src={PicBg} alt="headimg"/>
     <p>Loren ipsum solt</p>
 </div>
     );

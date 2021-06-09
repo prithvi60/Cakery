@@ -327,17 +327,38 @@ transform: translate(140px,50px);
     row-gap: 1em;
 }
 .show-img{
+    z-index: 98;
     border: 2px transparent;
     border-radius: 10px;
-   /* background-image: initial; */
-   display: block;
    max-width:390px;
    max-height:390px;
    width: auto;
    height: 320px;
+   /* margin-left: 10px; */
+}
+.invisible{
+    z-index: 100;
+    background-color:transparent;
+    border-color: transparent;
+}
+.invisible:focus img{
+    background-color: black;
+     opacity: 0.55; 
+}
+.show-inside{ display: block;
+    position: absolute;
+    z-index: 101;
+}
+
+.show-inside p{ 
+   transform: translate(130px,-190px);
+} 
+.show-inside img{ 
+    transform: translate(45px,0px);
+
+ } 
  
 
-}
 /* Follow Section */
 .mail-container{
     display: flex;
