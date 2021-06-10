@@ -1,6 +1,6 @@
 <svg width="189" height="68" viewBox="0 0 189 68" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M68 49.9941C72.9642 59.0767 82.0941 65.3937 92.8252 65.9561C104.643 66.5755 115.26 60.0506 120.85 49.9941M68 18.2785C73.5493 8.0675 84.2501 1.41887 96.1747 2.04382C106.097 2.56381 114.65 8.00345 119.807 16" stroke="white" stroke-width="3"/>
 <g style="mix-blend-mode:overlay">
-<rect x="1.51961" y="18.9544" width="185" height="32" rx="15.5" transform="rotate(-0.754088 1.51961 18.9544)" stroke="white" stroke-width="3"/>
+<!-- <rect x="1.51961" y="18.9544" width="185" height="32" rx="15.5" transform="rotate(-0.754088 1.51961 18.9544)" stroke="white" stroke-width="3"/> -->
 </g>
 </svg>
