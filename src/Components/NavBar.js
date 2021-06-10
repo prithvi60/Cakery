@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import '../App.css';
 import texttitle from '../icons/textheading.png';
-
+// import { Multiselect } from 'multiselect-react-dropdown';
 
 export default function NavBar() {
 
@@ -24,6 +24,42 @@ export default function NavBar() {
     )
 
 }
+// // multiselect
+// function Menu(props){
+//     const [open,setOpen] = useState(false);
+//     const [options,setOptions]=useState(
+//         {name: 'Srigar', id: 1},{name: 'Sam', id: 2}  
+//     );
+//     return(
+//         <li className="logo">   
+                        
+//        <button className="nav-btn" onClick={()=> setOpen(!open)}>  
+//             <svg className="menu" xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="24" height="24" viewBox="0 0 24 24">
+//             <path fill="#000000" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+//             </svg>          
+//         </button>  
+      
+//        {/* {open && props.children} */}
+//        <Multiselect
+//             options={options} // Options to display in the dropdown
+//             selectedValues={selectedValue} // Preselected value to persist in dropdown
+//             onSelect={onSelect} // Function will trigger on select event
+//             onRemove={onRemove} // Function will trigger on remove event
+//             displayValue="name" // Property name to display in the dropdown options
+//             />
+//        </li>
+//     );
+//     }
+
+//     function onSelect(selectedList, selectedItem){
+//         return null;
+//     }
+    
+//     function onRemove(selectedList, removedItem){
+//         return null;
+//     }
+
+// multiselect end
 
 function Menu(props){
 const [open,setOpen] = useState(false);
