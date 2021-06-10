@@ -5,7 +5,6 @@ import Creation from '../Components/Creation';
 import ContentTwo from '../Components/ContentTwo';
 import '../App.css';
 
-import ImageCarousel from '../Components/Specality';
 
 export default function HomePage() {
     return (
@@ -23,7 +22,6 @@ export default function HomePage() {
         <Creation/>
         <ContentTwo/>
         <div className="rep-container">
-            {/* <ImageCarousel/> */}
         </div>
 </>
     );
