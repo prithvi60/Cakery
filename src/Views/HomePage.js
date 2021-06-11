@@ -22,6 +22,12 @@ export default function HomePage() {
         <Creation/>
         <ContentTwo/>
         <div className="rep-container">
+            <br/>
+            <br/>
+            <h1>Recipies For You</h1>
+        </div>
+        <div className="price-container">
+            <p>Our Prices</p>
         </div>
 </>
     );

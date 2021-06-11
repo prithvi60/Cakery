@@ -368,22 +368,44 @@ transform: translate(140px,50px);
     background-image: url(./images/style_1_1\ \(1\).svg),url(./images/style_1_2.svg);
     background-blend-mode: overlay;
     width: 411px;
-    height: 800px;
+    height: 1100px;
     transform: translateY(60px);
     background-position-x:0px,50px;
     background-position-y: 0px,0px
     
 }
+
+.cont-containertwo span{
+    display: flex;
+    flex-direction: column;
+    transform: translate(0px,60px);
+    height: 230px;
+}
+.cont-containertwo span >:first-child{
+  transform: translate(180px,0px);
+  min-height:63px ;
+ }
+
 .cont-containertwo p{
     display: flex;
     justify-content: center;
-    margin-left: 10px;
-    transform: translateY(200px);
+    margin-left: 20px;
+    text-align:center;
+   font-size: 17px;
+   font-weight: lighter;
+    color: white;
+}
+.cont-containertwo h2{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-size: 30px;
+    font-weight: normal;
     color: white;
 }
 .cont-containertwo button{
     display: flex;
-    transform: translate(80px,300px);
+    transform: translate(90px,80px);
     background-color: transparent;
     border:3px solid white;
     border-radius: 50px;
@@ -402,15 +424,26 @@ transform: translate(140px,50px);
     background-color: white;
     color: black;
 }
+
 /* recipies */
 .rep-container{
     display: flex;
     flex-direction: column;
     width: 411px;
-    height: 986px;
-    background-color:#e7bdb4 ;
+    height: 1200px;
+    background-color:#ff91a4 ;
  
 }
+/* Prices */
+.price-container{
+    display: flex;
+    flex-direction: column;
+    width: 411px;
+    height: 1200px;
+    background-color:white ;
+ 
+}
+
 /* Follow Section */
 .mail-container{
     display: flex;
@@ -430,13 +463,22 @@ transform: translate(140px,50px);
     display: flex;
     justify-content: center;
     color: white;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+.soc-row{
+    display: flex;
+    transform: translate(0px,60px);
 
 }
 .soc-btn{
     transform: translateY(-80px);
     display: flex;
-    margin:auto
-    
+    margin:auto;
+    padding: 1em;
+    border:1px solid transparent;
+    border-radius: 50px;
 }
 /* footer */
 .footer{display:flex;

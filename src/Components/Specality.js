@@ -149,4 +149,3 @@ function CarousalCard({item}){
   else return null;
   
 }
-export {ImageCarousel};
