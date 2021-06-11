@@ -267,6 +267,7 @@ background: #FFFFFF;
     display: flex;
     flex-direction: column;
     background-image: url(./images/greenbg.jpg),url(./images/style_1_2.svg);
+    /* background-image: url(./images/contentbg2.jpg); */
     background-blend-mode: overlay;
     background-color: green;
     opacity: 0.8;
@@ -430,10 +431,63 @@ transform: translate(140px,50px);
     display: flex;
     flex-direction: column;
     width: 411px;
-    height: 1200px;
+    height: 586px;
+    background-color:white ;
+ 
+}
+.cardpic{
+    display: flex;
+    min-width: 280px;
+    flex-direction: column;
+    align-items: center;
+
+}
+.cardpic img{
+    display: flex;
+    width:380px ;
+    height: 180px;
+}
+.rep-container > img{ 
+  transform: translate(100px,90px);
+}
+
+.rep-container > h1{ 
+    display: flex;
+    justify-content: center;
+    transform: translate(0px,90px);
+}
+
+/* Client */
+.client-container{
+    display: flex;
+    flex-direction: column;
+    width: 411px;
+    height: 586px;
     background-color:#ff91a4 ;
  
 }
+.client-container p{
+    margin-left: 10px;
+   font-size: 13px;
+}
+.client-container > h1{ 
+    display: flex;
+    justify-content: center;
+}
+.client-pic{
+    display: flex;
+    min-width: 280px;
+    flex-direction: column;
+    align-items: center;
+
+}
+.client-pic img{
+    display: flex;
+    width:100px ;
+    height: 100px;
+    border-radius: 50px;
+}
+
 /* Prices */
 .price-container{
     display: flex;
@@ -442,6 +496,23 @@ transform: translate(140px,50px);
     height: 1200px;
     background-color:white ;
  
+}
+
+.price-container h1{
+    display: flex;
+    justify-content: center;
+}
+.price-container >:nth-child(2){
+    display: flex;
+    justify-content: center;
+    /* transform: translateY(-10px); */
+}
+.price-container span{
+    height: 520px;
+    margin: auto;
+    border:2px solid green;
+    /* border-bottom: px; */
+    border-radius: 10px;
 }
 
 /* Follow Section */
