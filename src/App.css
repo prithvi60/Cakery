@@ -264,24 +264,42 @@ background: #FFFFFF;
     
 }
 /* Content */
-.cont-container{
+.cont-container{ 
+
     display: flex;
     flex-direction: column;
-    background-image: url(./images/greenbg.jpg),url(./images/style_1_2.svg);
-    /* background-image: url(./images/contentbg2.jpg); */
-    background-blend-mode: overlay;
+    background-image: url(./images/greenbg.jpg);
     background-color: green;
+    background-blend-mode: overlay;
     opacity: 0.8;
     width: 411px;
     height: 800px;
-    transform: translateY(-20px);
-    background-position-x: -710px,0px;
-    background-position-y: -20px,0px
+     transform: translateY(-20px); 
+     background-position-x: -710px,0px; 
+    background-position-y: -20px,0px;
+    -webkit-mask-image:url(./images/style_1_2.svg);
+    -webkit-mask-position: bottom;
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    
     
 }
+
+/* .bg-overlay{ 
+    z-index: 1;
+    display: block;
+    position: absolute;
+    width: 411px;
+    height: 800px;
+    -webkit-mask-image:url(./images/style_1_2.svg);
+    -webkit-mask-position: bottom;
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    
+} */
 .heart{
     display: flex;
-transform: translate(140px,50px);
+    transform: translate(140px,50px);
     width: 120px;
     height: 120px;
 }
@@ -369,7 +387,6 @@ transform: translate(140px,50px);
     flex-direction: column;
   
     /* background: url(./images/style_1_1\ \(1\).svg),url(./images/style_1_2.svg); */
-  
     background-image: url(./images/contentbg2.jpg); 
     background-size: cover;
     background-blend-mode: screen;
