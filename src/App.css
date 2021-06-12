@@ -367,8 +367,12 @@ transform: translate(140px,50px);
 .cont-containertwo{
     display: flex;
     flex-direction: column;
-    background-image: url(./images/style_1_1\ \(1\).svg),url(./images/style_1_2.svg);
-    background-blend-mode: overlay;
+  
+    /* background: url(./images/style_1_1\ \(1\).svg),url(./images/style_1_2.svg); */
+  
+    background-image: url(./images/contentbg2.jpg); 
+    background-size: cover;
+    background-blend-mode: screen;
     width: 411px;
     height: 1100px;
     transform: translateY(60px);
