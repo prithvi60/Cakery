@@ -63,10 +63,10 @@ if(open) return(
 <div className="show-inside">
      {console.log(open)}
     <img className="show-img"src={PicBg} alt="heading"/>
-    { item === 1 && <p>Loren ipsum solt1</p>}
-    { item === 2 && <p>Loren ipsum solt2</p>}
-    { item === 3 && <p>Loren ipsum solt3</p>}
-    { item === 4 && <p>Loren ipsum solt4</p>}
+    { item === 1 && <p>Loren ipsum dolor 1</p>}
+    { item === 2 && <p>Loren ipsum dolor 2</p>}
+    { item === 3 && <p>Loren ipsum dolor 3</p>}
+    { item === 4 && <p>Loren ipsum dolor 4</p>}
 </div>
     );
 else return null;
