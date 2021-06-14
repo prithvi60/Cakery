@@ -3,23 +3,58 @@ import React from 'react'
 import NavBar from './Components/NavBar';
 import EmailField from './Components/EmailField';
 import PageUp from './Components/PageUp';
-
+// Pages
 import HomePage from './Views/HomePage';
+import Contact from './Views/Contact';
+import Pages from './Views/Pages';
+import Portfolio from './Views/Portfolio';
+import Blog from './Views/Blog';
+import Shop from './Views/Shop';
+
+
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
 return(
-<> 
-<PageUp/>
-<NavBar/>
+<Router>
+  <> 
+  <PageUp/>
+  <NavBar/>
+  {/* router */}
+  <Switch>
+    <Route exact path="/">
+      <HomePage/>
+      </Route>
 
-{/* router */}
-<HomePage/>
+      <Route path="/contact">
+      <Contact/>
+      </Route>
 
-<EmailField/>
-        <div className="footer">
-          <h1 className="footer-text">Bellaria- A Delicious Cakes and Bakery </h1>
-        </div>
-</>
+      
+      <Route path="/pages">
+      <Pages/>
+      </Route>
+      
+      <Route path="/portfolio">
+      <Portfolio/>
+      </Route>
+      
+      <Route path="/blog">
+      <Blog/>
+      </Route>
+      
+      <Route path="/shop">
+      <Shop/>
+      </Route>
+
+  </Switch>
+
+  <EmailField/>
+          <div className="footer">
+            <h1 className="footer-text">Bellaria- A Delicious Cakes and Bakery </h1>
+          </div>
+  </>
+</Router>
 );
 }
 

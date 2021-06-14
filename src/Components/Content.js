@@ -5,9 +5,9 @@ import {ReactComponent as BorderBtn} from '../icons/splbtn.svg'
 import { Up } from './PageUp'
 export default function Content() {
     return (<>
-        {/* <div className="bg-overlay"></div> */}
+        
           <div className="cont-container"> 
-         
+          <div className="bg-overlay"> </div>
           <img className="heart" src={heart} alt="logo"/>
           
             <h1>Magic Processing</h1>
@@ -16,6 +16,7 @@ export default function Content() {
             </p>
             <button onClick={Up}><BorderBtn fill="#ffffff"/>Discover More</button>
          </div>
+        
          </>
     )
 }

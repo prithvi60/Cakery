@@ -1,13 +1,15 @@
 import React,{useState} from 'react'
 import '../App.css';
 import texttitle from '../icons/textheading.png';
+import {Link} from 'react-router-dom';
 // import { Multiselect } from 'multiselect-react-dropdown';
 
 export default function NavBar() {
 
     return ( <>
         <div id="top" className="nav-bar">
-           <img className="text-title" src={texttitle} alt="Belaria" />
+           <Link to="/"><img className="text-title" src={texttitle}  alt="Belaria" />
+           </Link>
             <nav>
                 <ul>
                 <Cart><div className="cart-item">
@@ -82,7 +84,8 @@ function DoubleDrop(){
     const[item,setItem] =useState(0);
     return(
         <div className="dropdown">
-        <p className="parent"> Home 
+        <p className="parent"> 
+           <Link to="/">Home</Link>
             <span className="arrow">
             <button className="nav-btn" onClick={() =>{setOpen(!open);setItem(1);}}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
@@ -96,7 +99,8 @@ function DoubleDrop(){
        
             </p>
        
-        <p className="parent">Pages
+        <p className="parent">
+            <Link to="/pages"> Pages </Link>
         <span className="arrow">
             <button className="nav-btn" onClick={() => {setOpen(!open);setItem(2);}}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
@@ -109,7 +113,8 @@ function DoubleDrop(){
             </DoubleDropItem>
            
         </p>
-        <p className="parent">Portfolio
+        <p className="parent">
+        <Link to="/portfolio"> Portfolio </Link>
         <span className="arrow">
             <button className="nav-btn" onClick={()=> {setOpen(!open);setItem(3);}}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
@@ -122,7 +127,8 @@ function DoubleDrop(){
             </DoubleDropItem>
         
         </p>
-        <p className="parent">Blog
+        <p className="parent">
+        <Link to="/blog"> Blog </Link>
         <span className="arrow">
             <button className="nav-btn" onClick={()=> {setOpen(!open);setItem(4);}}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
@@ -134,7 +140,8 @@ function DoubleDrop(){
               
             </DoubleDropItem>
           </p>  
-        <p className="parent"> Shop
+        <p className="parent"> 
+        <Link to="/shop"> Shop </Link>
         <span className="arrow">
             <button className="nav-btn" onClick={()=>{setOpen(!open);setItem(5);}}>  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
@@ -144,7 +151,7 @@ function DoubleDrop(){
             </span>
             <DoubleDropItem value={5} item={item} open={open}/>
         </p>
-        <p>Contacts
+        <p className="parent"> <Link to="/contact">Contacts</Link>
         </p>
        </div>
 
