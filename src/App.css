@@ -16,6 +16,7 @@
   }
 body{
     color: black;
+    width: 100vw;
     background-color: rgb(245, 240, 240);
     margin: 0;
     padding: 0;
@@ -106,7 +107,7 @@ background: #FFFFFF;
     border-radius: var(--border-radius);
     padding: 14px;
     overflow: hidden;
-    transition: height var(--speed) ease;
+    transition: 500ms ease;
   }
   .parent :first-child{
       text-decoration: none;
@@ -733,4 +734,44 @@ transform: translateX(60px);
 align-items: center;
 font-size: 14px ;
 color: white;
+}
+
+/* // Responsiveness */
+
+@media screen and (min-width: 540px) {
+     .footer{display: flex;
+        /* justify-content: center; */
+        width: auto;
+    }
+    .nav-bar{width: auto;}
+    .spl-container{
+        width: auto;
+    }
+    .show-container{
+        width: auto;
+    }
+    .cont-container{
+        width: auto;
+    }
+    .pic-container{
+        width: auto;
+    }
+    .price-container{
+        width: auto;
+    }
+    .rep-container{
+        width: auto;
+    }
+    .cont-containertwo{
+        width: auto;
+    }
+    .client-container{
+        width: auto;
+    }
+    .mail-container{
+        width: auto;
+    }
+}
+@media screen and (min-width: 1024px) {
+
 }
