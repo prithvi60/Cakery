@@ -4,21 +4,22 @@ import { useEffect } from 'react'
 
 export default function PageUp() {   
 useEffect(() => {
+  document.getElementById('myBtn').style.visibility='hidden';
     // When the user scrolls down 20px from the top of the document, show the button
-   window.onscroll = function() {scrollFunction()};
+   window.onscroll = function() {ScrollFunction()};
    }, [])
     return (
         <div className="page-up">
-            <button id="myBtn" onClick={Up} className="nav-btn">
+            <button  id="myBtn" onClick={Up} className="nav-btn">
                 <SrollIcon/>
-        
             </button>
         </div>
    
     )
 }
 
-function scrollFunction() {
+function ScrollFunction() {
+     
   if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
     document.getElementById('myBtn').style.visibility='visible';
   } else {

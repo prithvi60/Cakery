@@ -19,18 +19,24 @@ import  Desk1 from "../images/desk_01.png"
 import  Desk2  from "../images/desk_02.png"
 import  Desk3  from "../images/desk_03.png"
 
+// import  HeaderBg1 from "../icons/headerbg.jpg"
+// import  HeaderBg2 from "../icons/headerbg2.jpg"
 
 export default function HomePage() {
     return (
         <> 
 {/* components */}
         <div className="pic-container">
-        <div className="image-card"> 
+        <div  className="image-card" > 
+        {/* <TitleCarousel/> */}
+         </div>
+       
         <div className="icon-logo">
         <h1 className="icon-text">Welcome to Bellaria</h1>
         </div> 
-        </div>
+        
          </div>
+
         <Specality/>
         <Content/>
         <Creation/>
@@ -70,6 +76,24 @@ const breakPoints = [
   margin: 35px;
   font-size: 13px;
 `;
+// function TitleCarousel(){
+//   const [items] = useState(
+//       [   <img className="image-card-title"src={HeaderBg1} alt="headimg"/> 
+//         ,   <img className="image-card-title"src={HeaderBg2} alt="headimg"/> 
+//         , 3
+      
+//       ]
+//       );
+//   return(
+//       <Carousel pagination={false} itemsToShow={1} showArrows={true} enableAutoPlay={false}>
+//         {items.map((item) => (
+//           <Item key={item}>{items}</Item>
+//         ))}
+//       </Carousel>
+   
+//   )
+
+// }
 
 function ImageCarousel(){
     const [items] = useState(

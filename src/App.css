@@ -3,13 +3,17 @@
     font-family: 'Merienda One', cursive; 
     font-size: 16px;
     height: 100vh;
+
     --text-primary: #f3d1d1;
     --text-secondary: #ececec;
     --bg-primary: #d4d4e4;
     --bg-secondary: #141418;
-    --transition-speed: 600ms;
+    --transition-speed: 900ms;
 
 }
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
 body{
     color: black;
     background-color: rgb(245, 240, 240);
@@ -19,7 +23,8 @@ body{
 }
 
 
-/* navigation bar */
+/* // NAVIGATION BAR // */
+
 .nav-bar{
  display: flex;
 /* position: absolute; */
@@ -68,6 +73,7 @@ background: #FFFFFF;
 .nav-btn{
     background-color: transparent;
     border-color: transparent;   
+   
 }
 .cart-item{
     display: flex;
@@ -106,6 +112,12 @@ background: #FFFFFF;
       text-decoration: none;
       color: black;
   }
+  .parent :first-child:active{
+    color: #5FCAC7;
+  }
+  .parent :first-child:hover{
+    color: #5FCAC7;
+  }
   .dropdown p{
      z-index: 100;
      margin: 8px;
@@ -117,8 +129,25 @@ background: #FFFFFF;
    
  }
  .arrow{
-     display:flex; 
+     display:flex;
+      
  }
+ .arrow button svg:hover{
+     cursor: pointer;
+ }
+ .arrow button:active{
+     animation: spins 0.3s ease;
+ }
+@keyframes spins{
+    from{
+        transform: translate(300px),rotateY(0deg);
+    }
+    to{
+        transform: translate(300px),rotateY(90deg);
+    }
+}
+
+
 /* Search bar */
 .search-overlay{
     display: flex;
@@ -126,7 +155,7 @@ background: #FFFFFF;
     position: fixed;
     align-items: center;
     z-index: 101;
-    height:30vh;
+    height:110%;
     transform: translate(-81.7%,-10%);
     background-color:rgb(0, 0, 0);
     opacity: 0.75;
@@ -170,6 +199,7 @@ background: #FFFFFF;
 
 }
 .image-card{
+
     display: flex;
     flex-direction: column;
     width: 411px;
@@ -177,9 +207,33 @@ background: #FFFFFF;
     background-image: url(./icons/headerbg.jpg);
     background-size:411px 175px;
     opacity: 0.75;
+    backface-visibility: hidden;
+    animation: parallax 4s ease forwards;
+}
+.image-card-title{
+    display: flex;
+    flex-direction: column;
+    width: 411px;
+    height: 162px;
+    /* background-image: url(./icons/headerbg.jpg); */
+    background-size:cover;
+    opacity: 0.75;
+    backface-visibility: hidden;
+    transform: translate(0px,-80px);
+    animation: parallax 4s ease forwards;
+}
+
+
+@keyframes parallax{
+    from{opacity: 0.5;
+    }
+    to { opacity: 1;
+      
+    }
 }
 
 .icon-logo{
+    position: absolute;
     display: flex;
     justify-content: center;
     width: 411px;
@@ -189,6 +243,13 @@ background: #FFFFFF;
     background-size: 150px;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
+    animation:late 4s  ease;
+}
+@keyframes late{
+    from{opacity: 0;}
+    to{
+        opacity: 1;
+    }
 }
 .icon-text{
     display: flex;
@@ -258,7 +319,7 @@ background: #FFFFFF;
     box-shadow:transparent;
 }
 
-/* Scroll up */
+/* // Scroll up // */
 .page-up{
     /* display:flex; */
     z-index: 100;
@@ -268,6 +329,11 @@ background: #FFFFFF;
     border-radius: 15px ; */
     
 }
+.page-up svg path:hover{
+   opacity: 0;
+   transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
 /* Content */
 .cont-container{ 
     
