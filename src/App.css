@@ -338,42 +338,44 @@ background: #FFFFFF;
 
 /* Content */
 .cont-container{ 
-    
+    overflow: hidden;
     display: flex;
     flex-direction: column;   
     position: relative;
     width: 411px;
-    height: 800px;
-     transform: translateY(-90px); 
+    height: 850px;
+     transform: translateY(-160px); 
     align-items: center;
     margin: 70px 0px;
+    clip-path:polygon(50% 0%, 80% 10%, 100% 0, 100% 100%, 78% 100%, 50% 100%, 20% 100%, 1% 100%, 0 0, 20% 10%);
+    
+
 }
-.cont-container::before{
+ .cont-container::before{
 
     content: '';
     background-image: url(./images/greenbg.jpg);
     background-position-x: -710px,0px; 
     background-position-y: -20px,0px;
-
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: absolute; 
     width: 411px;
     height: 800px;
-  
-    mask-position: bottom;
-    mask-image: url(./images/style_1_2.svg);
-    -webkit-mask-image: url(./images/style_1_2.svg); 
-    mask-mode: alpha;
-    -webkit-mask-mode:alpha;
-  
-   
+    /* url of svg issue */
+    /* clip-path: url("./images/style_1_1.svg#topbg"); */ 
+    clip-path: polygon(0 0, 0% 20%, 0 57%, 0% 80%, 25% 80%, 48% 88%, 69% 81%, 100% 80%, 100% 49%, 100% 0);
+
+    
+} 
+.cont-container::after{
 }
+
 .bg-overlay{
+    z-index: 100;
+    display: block;
     position: absolute;
-    opacity: 0.6;
+    opacity: 0.5;
     background-color: green;
- background-blend-mode: screen;
+    background-blend-mode: screen;
     width: 411px;
     height: 800px;
 }
@@ -381,7 +383,7 @@ background: #FFFFFF;
 .heart{
     z-index: 100;
     display: flex;
-    /* transform: translate(140px,50px); */
+    transform: translate(0px,50px);
     width: 120px;
     height: 120px;
 }
@@ -389,7 +391,7 @@ background: #FFFFFF;
     z-index: 100;
     display: flex;
     justify-content: center;
-    /* transform: translateY(150px); */
+    transform: translateY(150px);
     color: white;
 }
 .cont-container p{
@@ -397,13 +399,13 @@ background: #FFFFFF;
     display: flex;
     justify-content: center;
     margin-left: 10px;
-    /* transform: translateY(200px); */
+    transform: translateY(200px);
     color: white;
 }
 .cont-container button{
     z-index: 100;
     display: flex;
-    /* transform: translate(80px,300px); */
+    transform: translate(0px,300px);
     background-color: transparent;
     border:3px solid white;
     border-radius: 50px;
@@ -429,7 +431,7 @@ background: #FFFFFF;
     align-items: center;
     width: 411px;
     height: auto;
-    transform: translateY(-20px);
+    transform: translateY(-160px);
 }
 .show-grid{
     display: grid;

@@ -7,7 +7,7 @@ export default function Content() {
     return (<>
         
           <div className="cont-container"> 
-          <div className="bg-overlay"> </div>
+          <div className="bg-overlay">  </div>
           <img className="heart" src={heart} alt="logo"/>
           
             <h1>Magic Processing</h1>
