@@ -362,12 +362,9 @@ background: #FFFFFF;
     height: 800px;
     /* url of svg issue */
     /* clip-path: url("./images/style_1_1.svg#topbg"); */ 
-    clip-path: polygon(0 0, 0% 20%, 0 57%, 0% 80%, 25% 80%, 48% 88%, 69% 81%, 100% 80%, 100% 49%, 100% 0);
-
-    
+   
 } 
-.cont-container::after{
-}
+
 
 .bg-overlay{
     z-index: 100;
