@@ -7,7 +7,8 @@ export default function Content() {
     return (<>
         
           <div className="cont-container"> 
-          <span><Curvy clip="path" id="topbg" width="inherit" height="inherit"/></span>
+       <div className="Bg-Svg"> <Curvy/> </div>
+
           <div className="bg-overlay">  </div>
           <img className="heart" src={heart} alt="logo"/>
           
