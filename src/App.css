@@ -260,8 +260,8 @@ body {
 .cont-container {
   display: flex;
   flex-direction: column;
-  background-image: url(./images/greenbg.jpg);
-  background-color: green;
+   background-image: url(./images/greenbg.jpg); 
+   background-color: green; 
   background-blend-mode: overlay;
   opacity: 0.8;
   width: 411px;
@@ -269,9 +269,9 @@ body {
   transform: translateY(-20px);
   background-position-x: -710px, 0px;
   background-position-y: -20px, 0px;
-  mask-image: url(./images/style_1_2.svg);
-  -webkit-mask-image: url(./images/style_1_2.svg);
-  -webkit-mask-position: bottom;
+   mask-image: url(./images/style_1_2.svg); 
+   -webkit-mask-image: url(./images/style_1_2.svg); 
+   -webkit-mask-position: bottom;
   -webkit-mask-size: cover;
   -webkit-mask-repeat: no-repeat;
    mask-position: bottom;
@@ -281,7 +281,7 @@ body {
 
   position: relative;
   width: 411px;
-  padding: 90px 0;
+  padding: 90px 0; 
 } 
  
 .cont-container .content {
@@ -365,7 +365,7 @@ body {
   background-color: rgba(67, 183, 156, 0.8);
 }
 
-/* Dicovery Button */
+/* Discovery Button */
 .discover_button_wrapper {
   position: relative;
   text-align: center;
