@@ -1,11 +1,11 @@
 import React from "react";
 import heart from "../images/heart2.png";
-import { ReactComponent as BorderBtn } from "../icons/splbtn.svg";
+// import { ReactComponent as BorderBtn } from "../icons/splbtn.svg";
 // import {ReactComponent as Curvy} from '../images/style_1_1.svg'
-import { Up } from "./PageUp";
+// import { Up } from "./PageUp";
 import DiscoverButton from "./DiscoverButton";
 
-import styleImg from "../images/style_1_2.svg";
+// import styleImg from "../images/style_1_2.svg";
 
 export default function Content() {
   return (
