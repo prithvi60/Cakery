@@ -1,9 +1,10 @@
 import React from 'react'
+import Slab from '../Components/Slab'
 
 export default function Portfolio() {
     return (
         <div>
-            Portfolio
+            <Slab header="Portfolio" para="Home"/>
         </div>
     )
 }

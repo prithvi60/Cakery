@@ -1,9 +1,10 @@
 import React from 'react'
+import Slab from '../Components/Slab'
 
 export default function Contact() {
     return (
         <div>
-            <h2>new Contact Page</h2>
+           <Slab header="Contact Us" para="Home"/>
         </div>
     )
 }
