@@ -12,17 +12,24 @@
     --transition-speed: 900ms;
 
 }
+
 *, *:before, *:after {
     box-sizing: border-box;
+   
   }
-body{
+html,body{
     color: black;
-    width: 100%;
+    max-width: 100%;
     margin: 0;
     padding: 0;
-    
+ 
 }
 
+/* scroll error */
+.sc-hKFxyN gXEQKd rec rec-slider{
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 /* // NAVIGATION BAR // */
 
@@ -203,7 +210,7 @@ background: #FFFFFF;
 
     display: flex;
     flex-direction: column;
-    width: 411px;
+    width: 100%;
     height: 162px;
     background-image: url(./icons/headerbg.jpg);
     background-size:411px 175px;
@@ -221,7 +228,7 @@ background: #FFFFFF;
     opacity: 0.75;
     backface-visibility: hidden;
     transform: translate(0px,-80px);
-    animation: parallax 4s ease forwards;
+    animation: parallax 5s 1s ease forwards;
 }
 
 
@@ -237,14 +244,14 @@ background: #FFFFFF;
     position: absolute;
     display: flex;
     justify-content: center;
-    width: 411px;
+    width: 100%;
     height: 182px;
     background-image: url(./images/slider_bg_1.png);
     background-position:center;
     background-size: 150px;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-    animation:late 4s  ease;
+    animation:late 5s  ease;
 }
 @keyframes late{
     from{opacity: 0;}
@@ -352,6 +359,7 @@ background: #FFFFFF;
 .cont-container::after{
     position: absolute;
    clip-path: url(#botbg);
+
 }
  .cont-container::before{
     position: absolute; 
@@ -366,8 +374,8 @@ background: #FFFFFF;
 .bg-overlay{
     display: block;
     position: absolute;
-    opacity: 0.7;
-    background-color: green;
+    opacity: 0.95;
+    background-color: rgba(67,183,156,0.8);
     background-blend-mode: screen;
     width: 100%;
     height: 800px;
@@ -376,7 +384,7 @@ background: #FFFFFF;
 .heart{
     z-index: 100;
     display: flex;
-    transform: translate(0px,50px);
+    transform: translate(0px,40px);
     width: 120px;
     height: 120px;
 }
@@ -384,21 +392,27 @@ background: #FFFFFF;
     z-index: 100;
     display: flex;
     justify-content: center;
-    transform: translateY(150px);
+    text-align: center;
+    transform: translateY(0px);
+    margin-left: 5px;
     color: white;
+    font-size: 65px;
 }
 .cont-container p{
     z-index: 100;
+    max-width:100% ;
     display: flex;
+    text-align: center;
     justify-content: center;
-    margin-left: 10px;
-    transform: translateY(200px);
+    margin-left: 5px;
+    transform: translateY(-20px);
     color: white;
+    font-weight: lighter;
 }
 .cont-container button{
     z-index: 100;
     display: flex;
-    transform: translate(0px,300px);
+    transform: translate(0px,20px);
     background-color: transparent;
     border:3px solid white;
     border-radius: 50px;
@@ -435,6 +449,7 @@ background: #FFFFFF;
     margin-left: 10px;
     margin-right: 10px;
     row-gap: 1em;
+    width: 100%;
 }
 .show-img{
     z-index: 98;
@@ -477,6 +492,8 @@ background: #FFFFFF;
     background-position-x:0px,50px;
     background-position-y: 0px,0px;
     clip-path:url(#topbg);
+
+
     
 }
 
@@ -494,9 +511,9 @@ background: #FFFFFF;
 .cont-containertwo p{
     display: flex;
     justify-content: center;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     text-align:center;
-   font-size: 17px;
+   font-size: 16px;
    font-weight: lighter;
     color: white;
 }
@@ -572,16 +589,23 @@ background: #FFFFFF;
  
 }
 .client-container p{
+    transform: translateY(40px);
+    color: white;
     margin-left: 10px;
-   font-size: 13px;
+   font-size: 16px;
+   text-align: center;
 }
-.client-container > h1{ 
+.client-pic :nth-child(3){
+    transform: translateY(10px);
+}
+.client-container  h1{ 
     display: flex;
     justify-content: center;
+    color: white;
 }
 .client-pic{
     display: flex;
-    min-width: 280px;
+    min-width: 300px;
     flex-direction: column;
     align-items: center;
 
@@ -591,6 +615,7 @@ background: #FFFFFF;
     width:100px ;
     height: 100px;
     border-radius: 50px;
+    transform: translateY(30px);
 }
 
 /* Prices */
@@ -636,6 +661,7 @@ background: #FFFFFF;
     font-size: 35px;
     font-weight: bold; 
 }
+
 .price-container ul{
     display: flex;
     flex-direction: column;
@@ -718,6 +744,9 @@ background: #FFFFFF;
     transform: translate(0px,60px);
 
 }
+.soc-row img{
+    width: 100%;
+}
 .soc-btn{
     transform: translateY(-80px);
     display: flex;
@@ -726,6 +755,7 @@ background: #FFFFFF;
     border:1px solid transparent;
     border-radius: 50px;
 }
+
 /* footer */
 .footer{display:flex;
     width: 100%;

@@ -24,6 +24,7 @@ import  Desk3  from "../images/desk_03.png"
 // import  HeaderBg1 from "../icons/headerbg.jpg"
 // import  HeaderBg2 from "../icons/headerbg2.jpg"
 
+
 export default function HomePage() {
     return (
         <> 
@@ -169,7 +170,7 @@ function CarousalCardOne({item}){
      
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel sem imperdiet, venenatis</p>
         <p>eros ac,mattis mauris. Nam ac purus justo. Vivamus non hendrerit velit.</p>
-      <h1>MAria Doe</h1>
+      <h1>Maria Doe</h1>
       </div>
     );
     else if(item === 2)
