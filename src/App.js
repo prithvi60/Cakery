@@ -3,6 +3,8 @@ import React from 'react'
 import NavBar from './Components/NavBar';
 import EmailField from './Components/EmailField';
 import PageUp from './Components/PageUp';
+import {ReactComponent as CurvyTop} from './images/shape_copyright_1.svg'
+
 // Pages
 import HomePage from './Views/HomePage';
 import Contact from './Views/Contact';
@@ -51,6 +53,9 @@ return(
 
   <EmailField/>
           <div className="footer">
+            <div>
+              <CurvyTop/>
+            </div>
             <h1 className="footer-text">Bellaria- A Delicious Cakes and Bakery </h1>
           </div>
   </>

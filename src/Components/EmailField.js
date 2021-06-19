@@ -7,11 +7,15 @@ import {ReactComponent as Youtube} from '../icons/005-youtube.svg'
 import {ReactComponent as Pinterest} from '../icons/004-pinterest.svg'
 import {ReactComponent as Mail} from '../icons/006-email.svg'
 
+import {ReactComponent as Curvy} from '../images/style_1_1.svg'
+
 import LogoBg from '../images/Bellaria_logo_big.png'
+
 
 export default function EmailField() {
     return (<>
     <div className="mail-container">
+    
     <p className="header-mail">Follow Us</p>  
     
         <div className="mail-field" >
@@ -28,8 +32,9 @@ export default function EmailField() {
             <img className="logo-bg" src={LogoBg} alt="logo"/> 
             <br/>
         <p className="header-mail">Get Our Sweet News</p>
+        <Curvy />
         </div>
-
+          
         </>
     )
 }

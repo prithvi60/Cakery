@@ -10,6 +10,8 @@ import Carousel from "react-elastic-carousel";
 import styled from "styled-components";
 
 import  SplImg from "../images/divider_4.png"
+import {ReactComponent as Curvy} from '../images/style_1_1.svg'
+
 
 import  Client1 from "../images/client1.jpg"
 import  Client2 from "../images/client2.jpg"
@@ -47,11 +49,15 @@ export default function HomePage() {
             <ImageCarousel/>
         </div>
         <div className="client-container">
+          
             <br/>
             <br/>
             <h1>Client Says</h1>
     
             <ImageCarouselOne/>
+            <div>
+            <Curvy/>
+          </div>
         </div>
         <Prices/>
 </>

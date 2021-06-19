@@ -5,12 +5,13 @@ import {ReactComponent as Ribbon} from '../icons/ribbons.svg'
 import {ReactComponent as Pie} from '../icons/001-cake.svg'
 import {ReactComponent as Strawberry} from '../icons/003-strawberry.svg'
 import {ReactComponent as CupCake} from '../icons/002-cupcake.svg'
+import {ReactComponent as Curvy} from '../images/style_1_1.svg'
 
 import { Up } from './PageUp'
 export default function ContentTwo() {
     return (
         <div className="cont-containertwo">
-            
+         
           {/* <img className="cont-bgtwo" src={ContentBg} alt="logo"/> */}
                 <span>
                     <Ribbon/>
@@ -36,7 +37,9 @@ export default function ContentTwo() {
                 <p>Lorem ipsum dolor amet, consectetur adipiscing elit. Nam consectetur facilisis aliquet.</p>
                 </span>
           <button onClick={Up}><BorderBtn fill="#ffffff"/>Know us Better</button>
-       
+          <div >
+           <Curvy/>
+            </div>
       </div>
     )
 }

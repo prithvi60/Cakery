@@ -10,10 +10,16 @@ import  Carous2 from "../icons/cake2.png"
 import  Carous3 from "../icons/cake3.png"
 import  Carous4 from "../icons/cake4.png"
 
+import {ReactComponent as CurvyTop} from '../images/shape_copyright_1.svg'
+
+
 
 export default function Specality() {
     return (
         <div className="spl-container">  
+        <div>
+       <CurvyTop/>
+        </div>
         <img className="header-img"src={SplImg} alt="headimg"/>
         <p className="header">Our Speciality</p>   
         <ImageCarousel/>
