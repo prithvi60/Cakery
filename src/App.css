@@ -582,6 +582,16 @@ button {
   transform: translateY(60px);
   background-position-x: 0px, 50px;
   background-position-y: 0px, 0px;
+
+  
+  mask-image: url("./images/style_1_2.svg");
+  mask-position: bottom;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  -webkit-mask-image: url("./images/style_1_2.svg");
+  -webkit-mask-position: bottom;
+  -webkit-mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
 }
 
 .cont-containertwo span {
