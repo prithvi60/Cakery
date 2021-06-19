@@ -69,10 +69,11 @@ return(
     <li className="logo">   
                     
    <button className="nav-btn" onClick={()=> setOpen(!open)}>  
-        <svg className="menu" xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="24" height="24" viewBox="0 0 24 24">
+        {/* <svg className="menu" xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="24" height="24" viewBox="0 0 24 24">
         <path fill="#000000" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
         </svg> 
-                 
+                  */}
+                  <span class="menu-uni">☰</span>
     </button>  
    {open && props.children}
    </li>

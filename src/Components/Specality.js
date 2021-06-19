@@ -52,7 +52,7 @@ function ImageCarousel(){
     return(
 
         <div className="carousel-wrapper">
-        <Carousel breakPoints={breakPoints} showArrows={false} enableAutoPlay={true}>
+        <Carousel breakPoints={breakPoints} showArrows={false} enableAutoPlay={true} transitionMs={1000} autoPlaySpeed={3500}>
           {items.map((item) => (
             <Item key={item}><CarousalCard item={item}/></Item>
           ))}

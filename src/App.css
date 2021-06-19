@@ -99,12 +99,41 @@ background: #FFFFFF;
     border: 2px solid rgba(0, 128, 0, 0.253);
     border-radius: 10px;
 }
+
+.menu-uni{
+    position: absolute;
+    font-size: 23px;
+    transform: translate(-10px,-8px);
+}
+
+
+  .menu-uni,
+  .menu-uni::before,
+  .menu-uni::after {
+    width: 2em;
+    height: 3px;
+    background: var(--clr-dark);
+    
+    transition: transform 350ms ease-in-out, opacity 200ms linear;
+  }
+  
+  .menu-uni::before,
+  .menu-uni::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+  
+  .menu-uni::before { bottom: 6px; }
+  .menu-uni::after { top: 6px;}
+  
+
 /* drop down */
 .dropdown {
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 350px;
+    width: 380px;
     left: -85px;
     top: 101px;
     z-index: 100;
@@ -114,7 +143,7 @@ background: #FFFFFF;
     border-radius: var(--border-radius);
     padding: 14px;
     overflow: hidden;
-    transition: 500ms ease;
+    transition: height 800ms ease;
   }
   .parent :first-child{
       text-decoration: none;
@@ -191,14 +220,13 @@ background: #FFFFFF;
 .search-text:focus{
     border-color: transparent ;
 }
-::placeholder { 
-    color: white;
+::placeholder{ 
     font-weight: bold;
-    opacity: 0.5;
   }
   
 /* title picture container */
 .pic-container{
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -207,7 +235,6 @@ background: #FFFFFF;
 
 }
 .image-card{
-
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -215,28 +242,31 @@ background: #FFFFFF;
     background-image: url(./icons/headerbg.jpg);
     background-size:411px 175px;
     opacity: 0.75;
-    backface-visibility: hidden;
     animation: parallax 4s ease forwards;
 }
 .image-card-title{
     display: flex;
     flex-direction: column;
-    width: 411px;
+    width: 100%;
     height: 162px;
-    /* background-image: url(./icons/headerbg.jpg); */
+  
     background-size:cover;
     opacity: 0.75;
-    backface-visibility: hidden;
+  
     transform: translate(0px,-80px);
-    animation: parallax 5s 1s ease forwards;
+    animation: parallax 3s 1s ease forwards;
 }
 
 
 @keyframes parallax{
-    from{opacity: 0.5;
+    from{
+        opacity: 0.5;
+        transform: scale(1.5);
+        
     }
-    to { opacity: 1;
-      
+    to { 
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -251,7 +281,7 @@ background: #FFFFFF;
     background-size: 150px;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-    animation:late 5s  ease;
+    animation:late 4s  ease;
 }
 @keyframes late{
     from{opacity: 0;}

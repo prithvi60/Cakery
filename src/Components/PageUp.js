@@ -1,5 +1,6 @@
 import React from 'react'
 import {ReactComponent as SrollIcon} from '../icons/start icon.svg'
+// import {ReactComponent as Curve} from '../images/Pageup.svg'
 import { useEffect } from 'react'
 
 export default function PageUp() {   
@@ -12,6 +13,7 @@ useEffect(() => {
         <div className="page-up">
             <button  id="myBtn" onClick={Up} className="nav-btn">
                 <SrollIcon/>
+                {/* <Curve width="12px" height="12px" fill="red"/> */}
             </button>
         </div>
    
