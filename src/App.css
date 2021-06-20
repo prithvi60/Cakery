@@ -100,34 +100,74 @@ background: #FFFFFF;
     border-radius: 10px;
 }
 
-.menu-uni{
-    position: absolute;
-    font-size: 23px;
-    transform: translate(-10px,-8px);
+.menu-uni {
+    display: block;
+    position: relative;
+    font-size: 8px;
+    transform: translate(5px,7px);
+    animation: turntwo .3s ease-out forwards ;
 }
-
-
+.menu-uni-open{
+    display: block;
+    position: relative;
+    font-size: 10px;
+    animation: turn .5s ease-out forwards;
+}
   .menu-uni,
   .menu-uni::before,
-  .menu-uni::after {
+  .menu-uni::after{
     width: 2em;
-    height: 3px;
-    background: var(--clr-dark);
-    
+    height: 2px;
+    background: black;
     transition: transform 350ms ease-in-out, opacity 200ms linear;
   }
-  
+  .menu-uni-open,
+  .menu-uni-open::before,
+  .menu-uni-open ::after{
+    width: 2em;
+    height: 2px;
+    background: black;
+    /* transition: transform 350ms ease-in-out, opacity 200ms linear; */
+  }
+  @keyframes turn{
+    from{opacity: 0.7;
+        transform: translateY(7px) rotate(0deg);
+    }
+    to{
+        opacity: 1;
+        transform:  translateY(7px) rotate(45deg);
+    }
+  }
+  @keyframes turntwo{
+    from{opacity: 0.7;
+        transform: translateY(7px) rotate(245deg);
+    }
+    to{
+        opacity: 1;
+        transform:  translateY(7px) rotate(0deg);
+    }
+}
   .menu-uni::before,
-  .menu-uni::after {
+  .menu-uni::after ,
+  .menu-uni-open::before,
+  .menu-uni-open::after{
     content: '';
     position: absolute;
     left: 0;
   }
+  .menu-uni::before,
+  .menu-uni-open::before { bottom: 6px; }
+  .menu-uni::after,
+  .menu-uni-open::after{ top: 6px;}
   
-  .menu-uni::before { bottom: 6px; }
-  .menu-uni::after { top: 6px;}
+   .menu-uni-open{
+    transform:  rotate(45deg);
+  }
+   .menu-uni-open::before {
+    opacity: 1;
+    transform: rotate(90deg) translate(6px);
+  }
   
-
 /* drop down */
 .dropdown {
     display: flex;
@@ -142,9 +182,18 @@ background: #FFFFFF;
     border: var(--border);
     border-radius: var(--border-radius);
     padding: 14px;
-    overflow: hidden;
-    transition: height 800ms ease;
+    animation: trans 1s ease-out forwards;
   }
+
+  @keyframes trans{
+    0%{ opacity: 0;
+        background-image: linear-gradient(white, transparent);   
+    }
+    100%{ opacity: 1;
+       background-color: white;
+    }
+}
+
   .parent :first-child{
       text-decoration: none;
       color: black;
@@ -172,20 +221,35 @@ background: #FFFFFF;
  .arrow button svg:hover{
      cursor: pointer;
  }
- .arrow button:active{
-     animation: spins 0.3s ease;
+
+ .arrow button svg{
+     animation: rot 2s ease forwards;
  }
-@keyframes spins{
-    from{
-        transform: translate(300px),rotateY(0deg);
-    }
-    to{
-        transform: translate(300px),rotateY(90deg);
-    }
+ @keyframes rot{
+     from{
+        transform: rotate(0deg);
+     }
+     to{
+        transform: rotate(90deg);
+     }
+ }
+
+ .list{
+     display: flex;
+     flex-direction: column;
+ }
+ .list *{
+    text-decoration: none;
+    color: black;
+}
+.list *:active{
+  color: #5FCAC7;
+}
+.list *:hover{
+  color: #5FCAC7;
 }
 
-
-/* Search bar */
+/* //SEARCH BAR// */
 .search-overlay{
     display: flex;
    justify-content: center;
@@ -306,7 +370,7 @@ background: #FFFFFF;
     height: 786px;
     transform: translateY(-25px);
     background-image: url(./images/whitebgnd.jpg);
-    background-repeat: repeat-y;
+    background-repeat: repeat-x;
     background-size:cover;
     background-position-x: -500px;
     background-blend-mode: overlay; 
@@ -710,12 +774,14 @@ background: #FFFFFF;
 
 }
 .donut-bg{
+    overflow-x: hidden;
     z-index: 100;
     position: absolute;
     transform: translate(95px,-130px);
 
 }
 .donut-bg2{
+    overflow-x: hidden;
     z-index: 100;
     position: absolute;
     transform: translate(95px,-330px);
@@ -758,7 +824,7 @@ background: #FFFFFF;
 .mail-field{
     display: flex;
     justify-content: center;
-    transform: translateY(500px);
+    transform: translateY(520px);
     
 }
 .header-mail{

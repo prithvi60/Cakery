@@ -73,7 +73,8 @@ return(
         <path fill="#000000" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
         </svg> 
                   */}
-                  <span class="menu-uni">☰</span>
+             {!open &&  <span className="menu-uni"></span>}
+             {open &&  <span className="menu-uni-open"></span>}
     </button>  
    {open && props.children}
    </li>
@@ -85,10 +86,10 @@ function DoubleDrop(){
     const[item,setItem] =useState(0);
     return(
         <div className="dropdown">
-        <p className="parent"> 
+        <p className="parent" onClick={() =>{setOpen(!open);setItem(1);}}> 
            <Link to="/">Home</Link>
             <span className="arrow">
-            <button className="nav-btn" onClick={() =>{setOpen(!open);setItem(1);}}>  
+            <button className="nav-btn" >  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
              <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
@@ -100,10 +101,10 @@ function DoubleDrop(){
        
             </p>
        
-        <p className="parent">
+        <p className="parent" onClick={() => {setOpen(!open);setItem(2);}}>
             <Link to="/pages"> Pages </Link>
         <span className="arrow">
-            <button className="nav-btn" onClick={() => {setOpen(!open);setItem(2);}}>  
+            <button className="nav-btn" >  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
              <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
@@ -114,10 +115,10 @@ function DoubleDrop(){
             </DoubleDropItem>
            
         </p>
-        <p className="parent">
+        <p className="parent"  onClick={()=> {setOpen(!open);setItem(3);}}>
         <Link to="/portfolio"> Portfolio </Link>
         <span className="arrow">
-            <button className="nav-btn" onClick={()=> {setOpen(!open);setItem(3);}}>  
+            <button className="nav-btn">  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
              <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
@@ -128,10 +129,10 @@ function DoubleDrop(){
             </DoubleDropItem>
         
         </p>
-        <p className="parent">
+        <p className="parent" onClick={()=> {setOpen(!open);setItem(4);}}>
         <Link to="/blog"> Blog </Link>
         <span className="arrow">
-            <button className="nav-btn" onClick={()=> {setOpen(!open);setItem(4);}}>  
+            <button className="nav-btn" >  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
              <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
@@ -141,10 +142,10 @@ function DoubleDrop(){
               
             </DoubleDropItem>
           </p>  
-        <p className="parent"> 
+        <p className="parent"  onClick={()=>{setOpen(!open);setItem(5);}}> 
         <Link to="/shop"> Shop </Link>
         <span className="arrow">
-            <button className="nav-btn" onClick={()=>{setOpen(!open);setItem(5);}}>  
+            <button className="nav-btn">  
             <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  width="18" height="16" viewBox="0 0 24 24">
              <path fill="#000000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
             </svg>
@@ -163,51 +164,59 @@ function DoubleDrop(){
 function DoubleDropItem(props){
    if(props.open && props.item ===1 && props.item === props.value) return(
         <>   
-          <p>Cakes</p>
-                <p>Lollipop</p> 
-                <p>Wedding</p> 
-                <p>Coffee</p> 
-                <p>Ice-Cream</p> 
-                <p>Home One-page</p> 
-                <p>Shop</p> 
-                <p>Landing</p> 
+        <div className="list">
+          <Link to="/shop">Cakes</Link>
+                <Link to="/shop">Lollipop</Link> 
+                <Link to="/shop">Wedding</Link> 
+                <Link to="/shop">Coffee</Link> 
+                <Link to="/shop">Ice-Cream</Link> 
+                <Link to="/shop">Home One-page</Link> 
+                <Link to="/shop">Shop</Link> 
+                <Link to="/shop">Landing</Link> 
+        </div>
         </>
     );
     else if(props.open && props.item ===2 && props.item === props.value) return(
         <>
-        
-            <p>About Us</p>
-                <p>Our Staff</p> 
-                <p>Pricing Tables</p>   
-                <p>Content Elements</p> 
-                <p>Recipies Grid</p> 
+        <div className="list">
+            <Link to="/">About Us</Link>
+                <Link to="/">Our Staff</Link> 
+                <Link to="/">Pricing Tables</Link>   
+                <Link to="/">Content Elements</Link> 
+                <Link to="/">Recipies Grid</Link> 
+                </div>
         </>
     );
     else if(props.open && props.item ===3 && props.item === props.value) return(
         <>
-   
-                <p>Masonry</p>
-                <p>Masonry wide</p> 
-                <p>Wide</p> 
-                <p>With Filter</p> 
-                <p>Two Columns</p> 
-                <p>With Sidebar</p> 
-                <p>Square</p> 
+            <div className="list">
+                <Link to="/">Masonry</Link>
+                <Link to="/">Masonry wide</Link> 
+                <Link to="/">Wide</Link> 
+                <Link to="/">With Filter</Link> 
+                <Link to="/">Two Columns</Link> 
+                <Link to="/">With Sidebar</Link> 
+                <Link to="/">Square</Link> 
+                </div>
         </>
     );
     else if(props.open && props.item ===4 && props.item === props.value) return(
         <>
-                 <p>Checkerboard</p>
-                <p>Standard</p> 
-                <p>Masonry</p> 
+                <div className="list">
+                 <Link to="/">Checkerboard</Link>
+                <Link to="/">Standard</Link> 
+                <Link to="/">Masonry</Link> 
+                </div>
         </>
     );
     else if(props.open && props.item ===5 && props.item === props.value) return(
         <>
-                  <p>Shop</p>
-                <p>Cart</p> 
-                <p>Checkout</p> 
-                <p>My account</p> 
+        <div className="list">
+                  <Link to="/">Shop</Link>
+                <Link to="/">Cart</Link> 
+                <Link to="/">Checkout</Link> 
+                <Link to="/">My account</Link> 
+                </div>
         </>
     );
     else
