@@ -5,6 +5,7 @@ import Creation from '../Components/Creation';
 import ContentTwo from '../Components/ContentTwo';
 import Prices from '../Components/Prices';
 import '../App.css';
+import '../Responsive.css'
 
 import Carousel from "react-elastic-carousel";
 import styled from "styled-components";

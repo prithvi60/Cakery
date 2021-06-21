@@ -212,10 +212,10 @@ function DoubleDropItem(props){
     else if(props.open && props.item ===5 && props.item === props.value) return(
         <>
         <div className="list">
-                  <Link to="/">Shop</Link>
-                <Link to="/">Cart</Link> 
-                <Link to="/">Checkout</Link> 
-                <Link to="/">My account</Link> 
+                  <Link to="/shop">Shop</Link>
+                <Link to="/cart">Cart</Link> 
+                <Link to="/checkout">Checkout</Link> 
+                <Link to="/shop">My account</Link> 
                 </div>
         </>
     );

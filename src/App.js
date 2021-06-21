@@ -12,6 +12,8 @@ import Pages from './Views/Pages';
 import Portfolio from './Views/Portfolio';
 import Blog from './Views/Blog';
 import Shop from './Views/Shop';
+import Cart from './Views/Cart';
+import Checkout from './Views/Checkout';
 
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -48,6 +50,14 @@ return(
       
       <Route path="/shop">
       <Shop/>
+      </Route>
+
+      <Route path="/cart">
+      <Cart/>
+      </Route>
+
+      <Route path="/checkout">
+      <Checkout/>
       </Route>
 
   </Switch>
