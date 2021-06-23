@@ -17,6 +17,7 @@ import Checkout from './Views/Checkout';
 
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Account from './Views/Account';
 
 function App() {
 
@@ -58,6 +59,10 @@ return(
 
       <Route path="/checkout">
       <Checkout/>
+      </Route>
+
+      <Route path="/account">
+      <Account/>
       </Route>
 
   </Switch>

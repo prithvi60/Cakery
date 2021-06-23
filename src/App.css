@@ -900,12 +900,13 @@ color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 }
 .contact-container span{
     text-align: center;
     margin: 5px;
     font-weight: lighter;
-   color: gray;
+    color: gray;
 }
 
 .contact-col-send {
@@ -938,4 +939,22 @@ color: white;
     width: 100%;
     clip-path: url(#toponebg);
     text-align: center;
+    height: 800px;
+}
+
+/* //Account// */
+.account-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    clip-path: url(#toponebg);
+    text-align: center;
+    height: 800px;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.account-container form{
+    display: flex;
+    flex-direction: column;
 }
