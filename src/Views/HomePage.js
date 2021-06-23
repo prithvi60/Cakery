@@ -32,7 +32,7 @@ import  Pic4  from "../images/bg4.jpg"
 
 
 export default function HomePage() {
-  const [crationArr, setCrationArr] = useState([
+  const [crationArr] = useState([
     {
       img:Pic1,
       text:"ABC"

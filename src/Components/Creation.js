@@ -83,7 +83,7 @@ export default function Creation(props) {
     return (
         <div className="creation" style={{backgroundImage: `url("${img}")`}}>
             <div className='creation-hover'>
-                <img src={PicBg} className="hover-img" />
+                <img src={PicBg} className="hover-img"alt="hover" />
                 <p>{text}</p>
             </div>
         </div>
