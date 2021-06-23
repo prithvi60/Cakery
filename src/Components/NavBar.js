@@ -215,7 +215,7 @@ function DoubleDropItem(props){
                   <Link to="/shop">Shop</Link>
                 <Link to="/cart">Cart</Link> 
                 <Link to="/checkout">Checkout</Link> 
-                <Link to="/shop">My account</Link> 
+                <Link to="/account">My account</Link> 
                 </div>
         </>
     );
