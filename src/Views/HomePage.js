@@ -22,11 +22,50 @@ import  Desk1 from "../images/desk_01.png"
 import  Desk2  from "../images/desk_02.png"
 import  Desk3  from "../images/desk_03.png"
 
+
+import  Pic1 from "../images/bg1.jpg"
+import  Pic2 from "../images/bg2.jpg"
+import  Pic3 from "../images/bg3.jpg"
+import  Pic4  from "../images/bg4.jpg"
 // import  HeaderBg1 from "../icons/headerbg.jpg"
 // import  HeaderBg2 from "../icons/headerbg2.jpg"
 
 
 export default function HomePage() {
+  const [crationArr, setCrationArr] = useState([
+    {
+      img:Pic1,
+      text:"ABC"
+    },
+    {
+      img:Pic2,
+      text:"PQR"
+    },
+    {
+      img:Pic3,
+      text:"PQR"
+    },
+    {
+      img:Pic4,
+      text:"PQR"
+    },
+    {
+      img:Pic1,
+      text:"ABC"
+    },
+    {
+      img:Pic2,
+      text:"PQR"
+    },
+    {
+      img:Pic3,
+      text:"PQR"
+    },
+    {
+      img:Pic4,
+      text:"PQR"
+    },
+  ])
     return (
         <> 
 {/* components */}
@@ -43,8 +82,18 @@ export default function HomePage() {
 
         <Specality/>
         <Content/>
-        <Creation/>
+        <div className="show-container">
+        <img className="header-img"src={SplImg} alt="heading"/>
+        <p className="header">Our Creations</p>  
+        <div className='creation_wrapper'>
+              {crationArr.map((item,index)=><Creation key={index}
+              text={item.text}
+              img={item.img}/>)}
+            </div>
+        {/* <ImageShow/> */}
+        </div>
         <ContentTwo/>
+        {/* <Creation/> */}
         <div className="rep-container">     
             <img className="header-img"src={SplImg} alt="headimg"/> 
             <h1>Recipies For You</h1> 
@@ -55,6 +104,7 @@ export default function HomePage() {
             <br/>
             <br/>
             <h1>Client Says</h1>
+            
     
             <ImageCarouselOne/>
             <div>
