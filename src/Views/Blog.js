@@ -8,30 +8,46 @@ import { Link } from 'react-router-dom';
 export default function Blog() {
 
     // doubledrop
-    const [double, setDouble] = useState(false)
+    const [doubleA, setDoubleA] = useState(false);
+    const [doubleB, setDoubleB] = useState(false);
+    const [doubleC, setDoubleC] = useState(false);
+
+
     const [drop] = useState(
         [
        {main:
-       <Link to="/">Home</Link>,
+        <p className="parent" onClick={()=>setDoubleA(!doubleA)}> 
+
+       <Link to="/">Home</Link>
+       </p>,
         text: "Home",
         id: 0
        ,
 
          }, 
        {main: 
+        <p className="parent" onClick={()=>setDoubleB(!doubleB)}> 
+
        <Link to="/pages"> Pages </Link>
+       </p>
        ,
        text: "Pages",
        id:1
     },
        {main:
+        <p className="parent" onClick={()=>setDoubleC(!doubleC)}> 
+
        <Link to="/shop"> Shop </Link>
+       </p>
        ,
        text: "Shop",
        id: 2
     },
     {main:
+        <p className="parent" > 
+
         <Link to="/contact"> Contact </Link>
+        </p>
      }
     ]);
 
@@ -44,20 +60,17 @@ export default function Blog() {
            <Slab header="Blog" para="Home"/>
            <div style={{height: "500px"}}>
 
-                {/* <Menu >
-                   <DoubleDrop/>
-                </Menu> */}
-                {/* doubledrop */}
+        
                 <button style={{transform: "translate(290px,20px)"}} onClick={()=> setOpen(!open)}/>  
        
   <div style={{left: "350px",top:"530px"}} className="dropdown">
                
                 {open && drop.map((item,index)=> <>
-                <p className="parent" onClick={()=>setDouble(!double)}> {item.main} </p>
+                {item.main}
                 <Menu key={index}
                  id={item.id}
                  name={item.text}
-                 double={double}
+                 double={[doubleA,doubleB,doubleC]}
                 />
                 </>
             )} 

@@ -1,14 +1,13 @@
-import React,{ useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 
 
 export default function Menu(props) {
     const {double , name }=props;
-    const [inside, setInside] = useState(true);
     
-    if( name === "Home" && double ) return(
-      <>
-                      <div className="list" onClick={()=> setInside(!inside)}>
+    if( name === "Home" && double[0] ) return(
+      <>                
+                      <div className="list" >
                       <Link to="/shop">Cakes</Link>
                              <Link to="/shop">Lollipop</Link> 
                              <Link to="/shop">Wedding</Link> 
@@ -20,7 +19,7 @@ export default function Menu(props) {
                      </div> 
                     </>  
          );
-    else if(name === "Pages" && double ) return(
+    else if(name === "Pages" && double[1] ) return(
                          <>
                          <div className="list">
                              <Link to="/">About Us</Link>
@@ -31,7 +30,7 @@ export default function Menu(props) {
                                  </div>
                          </>
                      );
-    else if(name === "Shop" && double ) return(
+    else if(name === "Shop" && double[2]) return(
                         <>
                         <div className="list">
                                 <Link to="/shop">Shop</Link>

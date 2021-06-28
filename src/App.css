@@ -170,14 +170,13 @@ background: #FFFFFF;
     flex-direction: column;
     position: absolute;
     width: 24rem;
-    margin-left:-165px;
+    margin-left:-84px;
     top: 101px;
     z-index: 100;
     transform: translateX(-45%);
     background-color:white;
     border: var(--border);
     border-radius: var(--border-radius);
-    padding: 14px;
     animation: trans 1s ease-out forwards;
   }
 
@@ -203,12 +202,18 @@ background: #FFFFFF;
   .dropdown p{
      z-index: 100;
      margin: 8px;
+     padding: 10px;
+
+
   }
   .dropdown span{
       width: 30px;
       justify-content: flex-end; 
-      transform: translate(300px,-25px);
-   
+      transform: translate(320px,-45px);
+
+ }
+ .list{
+     margin-left: 22px;
  }
  .arrow{
      display:flex;
