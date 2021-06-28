@@ -1,10 +1,12 @@
 import React from 'react'
+import NavBar from '../Components/NavBar'
 import Slab from '../Components/Slab'
 import  SplImg from "../images/divider_4.png"
 
 export default function Contact() {
     return (
         <div>
+            <NavBar/>
            <Slab header="Contact Us" para="Home"/>
            <div className="contact-container">
            <img className="header-img"src={SplImg} alt="heading"/>

@@ -10,6 +10,7 @@ import  Pic4  from "../images/bg4.jpg"
 
 
 import {ReactComponent as CurvyTop} from '../images/shape_copyright_1.svg'
+import NavBar from '../Components/NavBar';
 
 
 
@@ -63,6 +64,7 @@ export default function Shop() {
       ])
     return (
         <>
+        <NavBar/>
             <Slab header="Shop" para="Home"/>
 
             <div className="show-container" style={{transform: "translateY(20px)"}}>

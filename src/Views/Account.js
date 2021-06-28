@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import NavBar from '../Components/NavBar';
 import Slab from '../Components/Slab'
 
 
@@ -21,6 +22,7 @@ export default function Account() {
       }
     return (
         <>
+        <NavBar/>
         <Slab header="Account" para="Home"/>
         <div className="account-container">
         <form className="white" onSubmit={handleSubmit}>

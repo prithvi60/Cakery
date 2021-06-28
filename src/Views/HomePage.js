@@ -27,6 +27,7 @@ import  Pic1 from "../images/bg1.jpg"
 import  Pic2 from "../images/bg2.jpg"
 import  Pic3 from "../images/bg3.jpg"
 import  Pic4  from "../images/bg4.jpg"
+import NavBar from '../Components/NavBar';
 // import  HeaderBg1 from "../icons/headerbg.jpg"
 // import  HeaderBg2 from "../icons/headerbg2.jpg"
 
@@ -68,6 +69,7 @@ export default function HomePage() {
   ])
     return (
         <> 
+        <NavBar/>
 {/* components */}
         <div className="pic-container">
         <div  className="image-card" > 

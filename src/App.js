@@ -1,6 +1,6 @@
 import React from 'react'
 
-import NavBar from './Components/NavBar';
+// import NavBar from './Components/NavBar';
 import EmailField from './Components/EmailField';
 import PageUp from './Components/PageUp';
 import {ReactComponent as CurvyTop} from './images/shape_copyright_1.svg'
@@ -25,7 +25,7 @@ return(
 <Router>
   <> 
   <PageUp/>
-  <NavBar/>
+  {/* <NavBar/> */}
   {/* router */}
   <Switch>
     <Route exact path="/">

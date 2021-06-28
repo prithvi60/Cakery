@@ -1,5 +1,8 @@
 import React,{ useState } from 'react'
 import Slab from '../Components/Slab'
+import NavBar from '../Components/NavBar';
+import Menu from '../Components/Menu';
+
 import { Link } from 'react-router-dom';
 
 export default function Blog() {
@@ -8,33 +11,28 @@ export default function Blog() {
     const [double, setDouble] = useState(false)
     const [drop] = useState(
         [
-       {main: <p className="parent" onClick={() =>{setDouble(!double)}}> 
-       <Link to="/">Home</Link>
-       </p>,
-        second:         <>   
-        <div className="list">
-          <Link to="/shop">Cakes</Link>
-                <Link to="/shop">Lollipop</Link> 
-                <Link to="/shop">Wedding</Link> 
-                <Link to="/shop">Coffee</Link> 
-                <Link to="/shop">Ice-Cream</Link> 
-                <Link to="/shop">Home One-page</Link> 
-                <Link to="/shop">Shop</Link> 
-                <Link to="/shop">Landing</Link> 
-        </div>
-        </>
-         }, 
-       {main: <p className="parent" onClick={() =>{setDouble(!double)}}> 
-       <Link to="/pages"> Pages </Link>
-       </p>,
-        second: <Link to="/shop">cake2</Link>
+       {main:
+       <Link to="/">Home</Link>,
+        text: "Home",
+        id: 0
+       ,
 
+         }, 
+       {main: 
+       <Link to="/pages"> Pages </Link>
+       ,
+       text: "Pages",
+       id:1
     },
-       {main:<p className="parent" onClick={() =>{setDouble(!double)}}> 
-       <Link to="/portfolio"> Portfolio </Link>
-       </p>,
-        second: <Link to="/shop">Cakes3</Link>   
+       {main:
+       <Link to="/shop"> Shop </Link>
+       ,
+       text: "Shop",
+       id: 2
     },
+    {main:
+        <Link to="/contact"> Contact </Link>
+     }
     ]);
 
     const [open,setOpen] = useState(false);
@@ -42,6 +40,7 @@ export default function Blog() {
 
     return (
         <div>
+            <NavBar/>
            <Slab header="Blog" para="Home"/>
            <div style={{height: "500px"}}>
 
@@ -49,16 +48,72 @@ export default function Blog() {
                    <DoubleDrop/>
                 </Menu> */}
                 {/* doubledrop */}
-                <button style={{transform: "translate(290px,200px)"}} onClick={()=> setOpen(!open)}/>  
-                {open && drop.map((item)=> item.main )} 
-                {double && drop.map((item)=> item.second )}
+                <button style={{transform: "translate(290px,20px)"}} onClick={()=> setOpen(!open)}/>  
+       
+  <div style={{left: "350px",top:"530px"}} className="dropdown">
+               
+                {open && drop.map((item,index)=> <>
+                <p className="parent" onClick={()=>setDouble(!double)}> {item.main} </p>
+                <Menu key={index}
+                 id={item.id}
+                 name={item.text}
+                 double={double}
+                />
+                </>
+            )} 
+            </div>
+            
+            
+                {/* {double && drop.map((item)=> item.second )} */}
             </div>
         </div>
     )
 }
 
 
+// function Menu(props){
+// const {double , name , key}=props;
+// const [inside, setInside] = useState(true);
 
+// if( name === "Home" && double ) return(
+//   <>   
+//                  <div className="list">
+//                    <Link to="/shop">Cakes</Link>
+//                          <Link to="/shop">Lollipop</Link> 
+//                          <Link to="/shop">Wedding</Link> 
+//                          <Link to="/shop">Coffee</Link> 
+//                          <Link to="/shop">Ice-Cream</Link> 
+//                          <Link to="/shop">Home One-page</Link> 
+//                          <Link to="/shop">Shop</Link> 
+//                          <Link to="/shop">Landing</Link> 
+//                  </div>
+//                  </>  
+//      );
+// else if(name === "Pages" && double ) return(
+//                      <>
+//                      <div className="list">
+//                          <Link to="/">About Us</Link>
+//                              <Link to="/">Our Staff</Link> 
+//                              <Link to="/">Pricing Tables</Link>   
+//                              <Link to="/">Content Elements</Link> 
+//                              <Link to="/">Recipies Grid</Link> 
+//                              </div>
+//                      </>
+//                  );
+// else if(name === "Shop" && double ) return(
+//                     <>
+//                     <div className="list">
+//                             <Link to="/shop">Shop</Link>
+//                             <Link to="/cart">Cart</Link> 
+//                             <Link to="/checkout">Checkout</Link> 
+//                             <Link to="/account">My account</Link> 
+//                             </div>
+//                     </>
+//                 );
+
+// else return null;
+
+// }
 
 
 
