@@ -3,6 +3,7 @@ import React from 'react'
 // import NavBar from './Components/NavBar';
 import EmailField from './Components/EmailField';
 import PageUp from './Components/PageUp';
+
 import {ReactComponent as CurvyTop} from './images/shape_copyright_1.svg'
 
 // Pages
@@ -14,6 +15,8 @@ import Blog from './Views/Blog';
 import Shop from './Views/Shop';
 import Cart from './Views/Cart';
 import Checkout from './Views/Checkout';
+import ShopPost from './Views/ShopPost';
+
 
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -52,6 +55,7 @@ return(
       <Route path="/shop">
       <Shop/>
       </Route>
+ 
 
       <Route path="/cart">
       <Cart/>
@@ -64,6 +68,9 @@ return(
       <Route path="/account">
       <Account/>
       </Route>
+
+       {/* Rotes parameter items  */}
+       <Route path="/:item_id" component={ShopPost}/>
 
   </Switch>
 

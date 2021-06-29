@@ -77,9 +77,11 @@ export default function Shop() {
                 {opensort && sort.map((item)=> item.text )} 
 
         <div className='creation_wrapper'style={{transform: "translateY(100px)"}} >
-              {crationArr.map((item,index)=><Creation key={index}
+              {crationArr.map((item,index)=> 
+               <Creation key={index}
               text="Add to Cart"
-              img={item.img}/>)}
+              img={item.img}
+              id={index} /> )}
             </div>
         </div>
         </>
