@@ -90,7 +90,8 @@ export default function HomePage() {
         <div className='creation_wrapper'>
               {crationArr.map((item,index)=><Creation key={index}
               text={item.text}
-              img={item.img}/>)}
+              img={item.img}
+              id={index} /> )}
             </div>
         {/* <ImageShow/> */}
         </div>
@@ -136,24 +137,7 @@ const breakPoints = [
   margin: 35px;
   font-size: 13px;
 `;
-// function TitleCarousel(){
-//   const [items] = useState(
-//       [   <img className="image-card-title"src={HeaderBg1} alt="headimg"/> 
-//         ,   <img className="image-card-title"src={HeaderBg2} alt="headimg"/> 
-//         , 3
-      
-//       ]
-//       );
-//   return(
-//       <Carousel pagination={false} itemsToShow={1} showArrows={true} enableAutoPlay={false}>
-//         {items.map((item) => (
-//           <Item key={item}>{items}</Item>
-//         ))}
-//       </Carousel>
-   
-//   )
 
-// }
 
 function ImageCarousel(){
     const [items] = useState(
