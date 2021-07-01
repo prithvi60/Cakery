@@ -22,6 +22,7 @@ export default function Content() {
             Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent molestie eu turpis nec molestie. Nam auctor magna mauris, non lacinia felis mattis nec.
             </p>
             <button onClick={Up}><BorderBtn fill="#ffffff"/>Discover More</button>
+
          </div>
         
          </>

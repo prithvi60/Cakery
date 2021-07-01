@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import NavBar from '../Components/NavBar';
 import Slab from '../Components/Slab';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom'
+import Cart from './Cart';
 
 
 class ShopPost extends Component {
@@ -19,7 +19,8 @@ class ShopPost extends Component {
         <p>25$</p>
         <p>Est accumsan. Eros nec odio penatibus erat elementum nullam, praesent pede et, nulla bibendum est ut facilisi varius, metus nunc nulla integer cum hendrerit. Eget sed, sed viverra ut metus sollicitudin morbi, massa neque fusce sem, mi lacinia ipsum.</p>
          <h2>Quantity 1</h2>
-        <button onClick={handleClick}>Add To Cart</button>
+        <button onClick={  <Cart detail={this.props.images}/>
+}>Add To Cart</button>
       </div>
       </>
     )
@@ -34,8 +35,6 @@ return{
 
 }
 
-function handleClick() {
-  <Redirect to="/cart" />  
-}
+
 
 export default connect(mapStateToProps)(ShopPost)

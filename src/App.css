@@ -519,10 +519,37 @@ background: #FFFFFF;
     transition: height var(--speed) ease;
 
 }
+/* .cont-container button{
+
+    display: flex;
+    transform: translate(0px,20px);
+    background-color: transparent;
+    border:3px solid white;
+    border-radius: 50px;
+    width: 4rem;
+    justify-content: center;
+    padding: 8px;
+    color: white;
+    left: 0;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-right-color: transparent !important;
+
+/* } */
+/* .cont-container button::before{
+    left: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-right-color: transparent !important;
+} 
+ */
+
 .cont-container button >:only-child{
+    /* visibility: hidden; */
    position: absolute;
    transform: translate(-2px,-25px);
 }
+
 .cont-container button:hover{
     background-color: white;
     color: black;

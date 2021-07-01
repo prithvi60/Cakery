@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom'
 import NavBar from '../Components/NavBar'
 
 
-export default function Cart() {
+export default function Cart(detail) {
     return (
         <div>
             <NavBar/>
            <Slab header="Cart" para="Home"/>
            <div className="cartpg-container">
+            {/* map function  of cart from redux*/}
            <p>Your cart is currently empty.</p>	
            <p>
             <Link  to="/shop">

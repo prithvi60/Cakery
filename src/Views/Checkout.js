@@ -10,6 +10,8 @@ export default function Checkout() {
             <Slab header="Checkout" para="Home"/>
            <div className="cartpg-container">
            <p>Your cart is currently empty.</p>	
+           <p>Your Order.</p>	
+
            {/* <p>
             <Link  to="/shop">
 			Return to shop</Link>
