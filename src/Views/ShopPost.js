@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import NavBar from '../Components/NavBar';
 import Slab from '../Components/Slab';
 import { connect } from 'react-redux';
-import Cart from './Cart';
-
+let name='Prithvi';
 
 class ShopPost extends Component {
 
@@ -19,8 +18,12 @@ class ShopPost extends Component {
         <p>25$</p>
         <p>Est accumsan. Eros nec odio penatibus erat elementum nullam, praesent pede et, nulla bibendum est ut facilisi varius, metus nunc nulla integer cum hendrerit. Eget sed, sed viverra ut metus sollicitudin morbi, massa neque fusce sem, mi lacinia ipsum.</p>
          <h2>Quantity 1</h2>
-        <button onClick={  <Cart detail={this.props.images}/>
-}>Add To Cart</button>
+         <h1>{this.props.counter}</h1>
+         <h1>{this.props.name}</h1>
+        <button onClick={this.props.add}>+</button>
+        <button onClick={this.props.sub}>-</button>
+
+        <button  onClick={this.props.addToCart}>Add To Cart</button>
       </div>
       </>
     )
@@ -30,11 +33,23 @@ class ShopPost extends Component {
 const mapStateToProps =(state, ownProps)=>{
   let id = ownProps.match.params.item_id;
 return{
-  images: state.image.find(images => images.id === id )
+  images: state.image.find(images => images.id === id ),
+  counter:state.counter,
+  name:state.name,
+  qty:state.cart.qty
 }
 
 }
+// Redux function dispatch actions/data to Redux
+const mapDispatchToProps = (dispatch) => {
+  return {
+    add: () => dispatch({ type: "INCREMENT",value: name}),
+    sub: () => dispatch({type: "DECREMENT"}),
+    addToCart: () => dispatch({type: "ADDTOCART", qty: this.props.counter, text: this.props.images.text})
+
+  };
+};
 
 
 
-export default connect(mapStateToProps)(ShopPost)
+export default connect(mapStateToProps,mapDispatchToProps)(ShopPost)

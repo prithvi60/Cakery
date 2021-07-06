@@ -44,10 +44,44 @@ const initState = {
       img:Pic4,
       text:"PQR"
    }
+],
+counter:2,
+name:"",
+cart:[
+  {id: '',
+  img:"",
+  text:"",
+  price:"",
+ qty:""}
 ]}
 
 const rootReducer = (state = initState, action) => {
-  return state;
+  const newState = { ...state };
+
+  switch (action.type) {
+  
+    case "INCREMENT": {
+      console.log(action.value);
+      newState.counter+=1;
+      newState.name=action.value;
+      
+      break;
+    }
+    case "DECREMENT": {
+      newState.counter-=1;
+      break;
+    }
+    case "ADDTOCART": {
+      newState.cart.text=action.text;
+      newState.cart.qty=action.qty;
+      console.log(action.text,action.qty);
+      break;
+    }
+  default: {
+    return newState
+    }
+  }
+  // return newState;
 };
 
 export default rootReducer;
