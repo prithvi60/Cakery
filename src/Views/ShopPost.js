@@ -45,7 +45,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     add: () => dispatch({ type: "INCREMENT",value: name}),
     sub: () => dispatch({type: "DECREMENT"}),
-    addToCart: () => dispatch({type: "ADDTOCART", qty: this.props.counter, text: this.props.images.text})
+    addToCart: () => dispatch({type: "ADDTOCART", qty: ShopPost.props.counter, text: ShopPost.props.images.text})
 
   };
 };

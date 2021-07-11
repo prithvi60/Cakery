@@ -2,9 +2,10 @@ import React from 'react'
 import Slab from '../Components/Slab'
 import { Link } from 'react-router-dom'
 import NavBar from '../Components/NavBar'
+import { connect } from 'react-redux';
 
 
-export default function Cart(detail) {
+function Cart() {
     return (
         <div>
             <NavBar/>
@@ -21,3 +22,15 @@ export default function Cart(detail) {
         </div>
     )
 }
+
+// Redux function map/subscribe to prop 
+const mapStateToProps =(state, ownProps)=>{
+//     let id = ownProps.match.params.item_id;
+//   return{
+//     images: state.image.find(images => images.id === id ),
+//     counter:state.counter,
+//     name:state.name,
+//     qty:state.cart.qty
+//   }
+}  
+export default connect(mapStateToProps)(Cart)
